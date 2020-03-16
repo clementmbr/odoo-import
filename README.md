@@ -86,6 +86,10 @@ Eu vou poder importar 2 _Marcadores_ como sub-categorias de contato da categoria
 
 ![](.gitbook/assets/image%20%2812%29.png)
 
+{% hint style="info" %}
+Na teoria é possível importar junto no mesmo arquivo .xls ou .CSV os objetos pai e filho de uma vez. Porém é mais complexo e é fonte de erros, por isso recomendamos de realizar esse tipo de importações pai/filho em duas vezes.
+{% endhint %}
+
 ## FAQ oficial da Odoo S.A.
 
 Para questões técnicas específicas sobre a importação :

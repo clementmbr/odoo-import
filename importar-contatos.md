@@ -40,5 +40,19 @@ Seguindo as etapas que a gente viu [na introdução](./#criacao-do-external-id-d
 
 ## Importação dos contatos
 
+[Como explicamos na introdução](./#relacao-pai-filho), é importante realizar em primeiro a importação dos Contatos "pai" \(como uma empresa\) e depois os Contatos "filho" \(como os membros de uma empresa\) ligados aos Contatos "pai" pelo External ID desses.
 
+Segue uma lista dos campos interessantes para uma importação de Contatos com todas as relações possíveis :
+
+| Título coluna | Conteúdo |
+| :--- | :--- |
+| **id** |  |
+| **name** |  |
+| **title/id** |  |
+| **is\_company** |  |
+| **customer** |  |
+| **supplier** |  |
+|  |  |
+
+ 
 
