@@ -20,11 +20,25 @@ Porém, um _Contato_ em Odoo pode apontar para vários outros objetos Odoo. Por 
 
 ### Condições de Pagamento
 
-![](.gitbook/assets/image%20%2815%29.png)
+![](.gitbook/assets/image%20%2817%29.png)
 
 ### Posições Fiscais
 
 ![](.gitbook/assets/image%20%282%29.png)
+
+### Lista de preços
+
+![](.gitbook/assets/image%20%288%29.png)
+
+### Marcadores de Contato \(ou "Tags do Contato", ou "categoria de Contato"\)
+
+Seguindo as etapas que a gente viu [na introdução](./#criacao-do-external-id-durante-a-importacao).
+
+### Tratamento para o contato
+
+![](.gitbook/assets/image%20%287%29.png)
+
+## Importação dos contatos
 
 
 
