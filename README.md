@@ -78,7 +78,7 @@ Por exemplo, importando o arquivo :
 
 ![](.gitbook/assets/image%20%281%29.png)
 
-Eu vou poder importar 2 _Marcadores_ como sub-categorias de contato da categoria pai "Meu Marcador importado 1" :
+Eu vou poder importar 2 _Marcadores_ como sub-categorias de contato da categoria pai "_Meu Marcador importado 1_" :
 
 ![](.gitbook/assets/image%20%287%29.png)
 
