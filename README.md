@@ -1,8 +1,8 @@
-# Funcionamento
+# Funcionamento básico
 
 Para importar dados no Odoo, basta clicar no botão _Import_ da página do tipo de objeto desejado.
 
-![](.gitbook/assets/image%20%2812%29.png)
+![](.gitbook/assets/image%20%2816%29.png)
 
 A complexidade da importação de dados no Odoo vem da complexidade em registrar em Odoo **as relações** entre os objetos importados.
 
@@ -27,7 +27,7 @@ Os dois são um identificador único do mesmo objeto, porém o ID no banco de da
 
 Primeiro precisa ativar o modo "desenvolvedor" do Odoo no painel de Configurações gerais :
 
-![](.gitbook/assets/image%20%284%29.png)
+![](.gitbook/assets/image%20%287%29.png)
 
 Depois ir na página do objeto desejado, por exemplo esse Marcador de contato \(chamado também de "Tag do contato", acessível pelo menu _Contatos_ &gt; _Configuração_ &gt; _Tags do contato_\), clicar na barata que apareceu \(encima na direita\), e abrir _Visualizar Metadata_ do objeto corrente :
 
@@ -35,21 +35,21 @@ Depois ir na página do objeto desejado, por exemplo esse Marcador de contato \(
 
 Aparece então as suas Metadatas, incluindo o **ID XML** \(outro nome para o External ID\), diferente  do ID 'simples' que é o identificador do objeto no banco de dados \(que não precisamos usar\) :
 
-![](.gitbook/assets/image%20%289%29.png)
+![](.gitbook/assets/image%20%2812%29.png)
 
 ## External ID na exportação
 
 Para exportar dados do Odoo para arquivos Excel \(ou CSV\), é preciso fazer aparecer os objetos para ser exportados em visualização '**lista**'. Isso permite selecionar os objetos para serem exportados. Quando selecionar um objeto aparece o botão **Ação** que permite, entre outras coisas, exportar os dados dos objetos selecionados :
 
-![](.gitbook/assets/image%20%282%29.png)
+![](.gitbook/assets/image%20%285%29.png)
 
 Ao exportar _Marcadores_ de contato, para seguir o nosso exemplo, basta selecionar a opção '_Update data_' para fazer aparecer o campo '_ID Externo_' dentro dos campos disponíveis :
 
-![](.gitbook/assets/image%20%2810%29.png)
+![](.gitbook/assets/image%20%2813%29.png)
 
 O resultado é um arquivo Excel com a lista dos _External ID_ de cada _Marcador_ :
 
-![](.gitbook/assets/image%20%286%29.png)
+![](.gitbook/assets/image%20%289%29.png)
 
 ## Criação do External ID durante a importação
 
@@ -57,15 +57,19 @@ A força desse _External ID_  é que ele pode ser dado a um objeto pelo usuário
 
 Por exemplo, se eu importar o seguinte arquivo Excel :
 
-![](.gitbook/assets/image%20%288%29.png)
+![](.gitbook/assets/image%20%2811%29.png)
 
 Basta clicar no botão _Import_ &gt; _Carregar Arquivo_ da página '_Tags do Contato_' e selecionar o arquivo para importar. Odoo reconhece o significação das colunas do meu arquivo mas é sempre possível escolher manualmente o destino de cada uma :
 
-![](.gitbook/assets/image%20%283%29.png)
+![](.gitbook/assets/image%20%286%29.png)
+
+{% hint style="info" %}
+Caso não preencher a casa "External ID", Odoo criará-lo automaticamente e importará o objeto mesmo assim.
+{% endhint %}
 
 Podemos verificar pela interface que o _External ID_ de cada _Marcador_  importado corresponde à cadeia de caracteres indicada no arquivo de importação. Será então possível usar esse mesmo _External ID_ no futuro, por exemplo durante a importação dos Contatos para indicar o _Marcador_ de cada _Contato_ :
 
-![](.gitbook/assets/image%20%2811%29.png)
+![](.gitbook/assets/image%20%2814%29.png)
 
 ## Relação pai / filho
 
@@ -76,11 +80,17 @@ Na mesma ideia que para importar a informação da relação entre dois objetos 
 
 Por exemplo, importando o arquivo :
 
-![](.gitbook/assets/image%20%281%29.png)
+![](.gitbook/assets/image%20%283%29.png)
 
 Eu vou poder importar 2 _Marcadores_ como sub-categorias de contato da categoria pai "_Meu Marcador importado 1_" :
 
-![](.gitbook/assets/image%20%287%29.png)
+![](.gitbook/assets/image%20%2810%29.png)
+
+## FAQ oficial da Odoo S.A.
+
+Para questões técnicas específicas sobre a importação :
+
+{% embed url="https://www.odoo.com/documentation/user/12.0/general/base\_import/import\_faq.html" %}
 
 
 

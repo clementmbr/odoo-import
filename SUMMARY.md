@@ -1,5 +1,5 @@
 # Table of contents
 
-* [Funcionamento](README.md)
+* [Funcionamento básico](README.md)
 * [Importar contatos](importar-contatos.md)
 
