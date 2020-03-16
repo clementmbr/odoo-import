@@ -10,25 +10,33 @@ Porém, um _Contato_ em Odoo pode apontar para vários outros objetos Odoo. Por 
 
 ## Importações anteriores aos Contatos
 
-### Bancos
+O método básico para importar qualquer objeto em Odoo é de primeiro exportar um arquivo de uma lista de objetos com a opção '_Update data \(import-compatible export\)_' e a lista dos campos que a gente quer importar :
 
 ![](.gitbook/assets/image%20%281%29.png)
 
-### Contas Bancárias
+Para depois criar seu próprio arquivo Excel de importação seguindo os títulos das colunas exportadas.
 
-![](.gitbook/assets/image%20%284%29.png)
+Segue a lista exaustiva dos objetos Odoo a ser importados antes da importação de Contatos, indicando cada vez a onde encontrar esse objeto na interface de Odoo.
 
-### Condições de Pagamento
-
-![](.gitbook/assets/image%20%2817%29.png)
-
-### Posições Fiscais
+### Bancos
 
 ![](.gitbook/assets/image%20%282%29.png)
 
+### Contas Bancárias
+
+![](.gitbook/assets/image%20%285%29.png)
+
+### Condições de Pagamento
+
+![](.gitbook/assets/image%20%2818%29.png)
+
+### Posições Fiscais
+
+![](.gitbook/assets/image%20%283%29.png)
+
 ### Lista de preços
 
-![](.gitbook/assets/image%20%288%29.png)
+![](.gitbook/assets/image%20%289%29.png)
 
 ### Marcadores de Contato \(ou "Tags do Contato", ou "categoria de Contato"\)
 
@@ -36,7 +44,7 @@ Seguindo as etapas que a gente viu [na introdução](./#criacao-do-external-id-d
 
 ### Tratamento para o contato
 
-![](.gitbook/assets/image%20%287%29.png)
+![](.gitbook/assets/image%20%288%29.png)
 
 ## Importação dos contatos
 
@@ -52,7 +60,21 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
 | **is\_company** |  |
 | **customer** |  |
 | **supplier** |  |
-|  |  |
+| **active** |  |
+| **type** |  |
+| **parent\_id/id** |  |
+| **country\_id** |  |
+| **lang** |  |
+| **category\_id/id** |  |
+| **property\_product\_pricelist/id** |  |
+| **property\_account\_position\_id/id** |  |
+| **property\_account\_receivable\_id/id** |  |
+| **property\_account\_payable\_id/id** |  |
+| **property\_payment\_term\_id/id** |  |
+| **property\_supplier\_payment\_term\_id/id** |  |
+| **customer\_payment\_mode\_id/id** |  |
+| **supplier\_payment\_mode\_id/id** |  |
+| compte bancaire |  |
 
  
 
