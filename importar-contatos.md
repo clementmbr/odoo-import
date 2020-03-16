@@ -14,7 +14,7 @@ O método básico para importar qualquer objeto em Odoo é de primeiro exportar 
 
 ![](.gitbook/assets/image%20%281%29.png)
 
-Para depois criar seu próprio arquivo Excel de importação seguindo os títulos das colunas exportadas.
+Para depois criar seu próprio arquivo Excel de importação seguindo os títulos das colunas exportadas e o formato de cada conteúdo.
 
 Segue a lista exaustiva dos objetos Odoo a ser importados antes da importação de Contatos, indicando cada vez a onde encontrar esse objeto na interface de Odoo.
 
