@@ -10,7 +10,7 @@ A complexidade da importação de dados no Odoo vem da complexidade em registrar
 
 Um exemplo : um dos campos de um _Contato_ é o campo _Marcadores_ \(chamado também de "categoria de contato", ou "Tag do contato"\). Para associar cada contato importado com um Marcador específico teremos que :
 
-1.  Importar todos os _Marcadores_ primeiro **antes** de importar os _Contatos_.
+1.  Importar todos os _Marcadores_ **antes** de importar os _Contatos_.
 2. Durante a importação dos _Contatos_ teremos que indicar os _**External ID**_ dos _Marcadores_  de cada _Contato_ importado, para indicar qual _Marcador_ vai ser associado a qual _Contato_.
 
 O _External ID_, chamado também de _**XML ID**_, é o identificador de um objeto presente em Odoo. Ele permite permite fazer a diferença por exemplo entre dois _Marcadores_ que teriam o mesmo nome no Odoo apesar de ser dois objetos distintos do mesmo tipo _'Marcador'_.
