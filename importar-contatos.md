@@ -77,12 +77,13 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
     <tr>
       <td style="text-align:left"><b>name</b>
       </td>
-      <td style="text-align:left">Nome do Contato</td>
+      <td style="text-align:left">Nome usual do Contato</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>legal_name</b>
       </td>
-      <td style="text-align:left">Nome completo do Contato</td>
+      <td style="text-align:left">Raz&#xE3;o Social do Contato se for uma empresa, Nome completo do Contato
+        se for uma pessoa f&#xED;sica</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>title/id</b>
@@ -120,11 +121,12 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
       <td style="text-align:left">Escolher entre :
         <br />- &quot;Contato&quot;
         <br />- &quot;Endere&#xE7;o de Cobran&#xE7;a&quot;
-        <br />- &quot;Endere&#xE7;o para envio:&quot;
-        <br />- &quot;Endere&#xE7;o privado&quot;
+        <br />- &quot;Endere&#xE7;o para envio:&quot; <em>(com os &quot;:&quot; no final)</em>
+        <br
+        />- &quot;Endere&#xE7;o privado&quot;
         <br />- &quot;Outro endere&#xE7;o&quot;
         <br />
-        <br />Uma pessoa f&#xED;sica ou uma empresa ser&#xE1; sempre to tipo &quot;Contato&quot;.
+        <br /><b>Uma pessoa f&#xED;sica ou uma empresa ser&#xE1; sempre do tipo &quot;Contato&quot;</b>.
         As outras op&#xE7;&#xF5;es s&#xE3;o para registrar v&#xE1;rios tipos de
         endere&#xE7;os. Pensar em primeiro importar o contato &apos;pai&apos; (com
         &apos;type&apos; igual a &quot;Contato&quot;) antes de importar os endere&#xE7;os
@@ -133,12 +135,34 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
     <tr>
       <td style="text-align:left"><b>parent_id/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><em>External ID</em> do contato &apos;pai&apos; do contato importado</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>country_id</b>
+      <td style="text-align:left"><b>country_id/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p><em>External ID</em> do pa&#xED;s do contato. Por exemplo &quot;<b>base.br</b>&quot;
+          para o Brasil ou &quot;<b>base.us</b>&quot; para os Estados Unidos.</p>
+        <p></p>
+        <p>Para acessar &#xE0; lista completa de todos os <em>External ID </em>dos
+          pa&#xED;ses registrados no banco de dado do Odoo, ir na p&#xE1;gina dos
+          objetos &quot;pa&#xED;ses&quot; pelo menu <em>Contatos</em> &gt; <em>Configura&#xE7;&#xE3;o</em> &gt; <em>Pa&#xED;ses</em>,
+          e <b>exportar</b> os pa&#xED;ses desejados com o seu respectivo nome e <em>External ID</em>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>state_id/id</b>
+      </td>
+      <td style="text-align:left">
+        <p><em>External ID</em> do estado do contato. Por exemplo &quot;<b>base.state_br_rj</b>&quot;
+          para o Rio de Janeiro ou &quot;<b>base.state_br_sp</b>&quot; para S&#xE3;o
+          Paulo.</p>
+        <p></p>
+        <p>Para acessar &#xE0; lista completa de todos os <em>External ID </em>dos
+          estados registrados no banco de dado do Odoo, ir na p&#xE1;gina dos objetos
+          &quot;Estados&quot; pelo menu <em>Contatos</em> &gt; <em>Configura&#xE7;&#xE3;o</em> &gt; <em>Estados</em>,
+          e <b>exportar</b> os estados desejados com o seu respectivo nome e <em>External ID</em>.</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>lang</b>
