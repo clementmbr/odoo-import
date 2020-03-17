@@ -28,13 +28,21 @@ Segue a lista exaustiva dos objetos Odoo a ser importados antes da importação 
 
 ### Condições de Pagamento
 
-![](.gitbook/assets/image%20%2818%29.png)
+![](.gitbook/assets/image%20%2821%29.png)
 
 ### Posições Fiscais
 
-![](.gitbook/assets/image%20%283%29.png)
+Uma _Posição Fiscal_ é uma tabela que faz a relação entre uma taxa e uma outra taxa. Cf o nosso [tutorial sobre as Posições Fiscais](https://odoo-doc.gitbook.io/fonctionnel/-LxRKpKPmg6E8oIFl-4d/v/pt/faturamento/posicoes-fiscais).
+
+É possível definir ou encontrar a lista das _Posições fiscais_ no menu _Faturamento &gt; Configuração :_
+
+![](.gitbook/assets/image%20%2811%29.png)
 
 ### Lista de preços
+
+Uma "_Lista de preço_" é o nome de objeto Odoo enganosamente escolhido para diferenciar várias "categorias de clientes" e vender um produto a preços diferentes para cada categoria. Cf o nosso [tutorial sobre as _"Listas de preço"_](https://odoo-doc.gitbook.io/fonctionnel/-LxRKpKPmg6E8oIFl-4d/v/pt/vendas/lista-de-precos).
+
+É possível definir ou encontrar a lista dessas "_Lista de preços_" clicando embaixo da opção "_Múltiplos Preços de Venda por Produto_" nas _Configurações_ do aplicativo de Vendas :
 
 ![](.gitbook/assets/image%20%289%29.png)
 
@@ -126,11 +134,12 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
         />- &quot;Endere&#xE7;o privado&quot;
         <br />- &quot;Outro endere&#xE7;o&quot;
         <br />
-        <br /><b>Uma pessoa f&#xED;sica ou uma empresa ser&#xE1; sempre do tipo &quot;Contato&quot;</b>.
+        <br /><b>Uma pessoa f&#xED;sica ou uma empresa ser&#xE1; sempre com &apos;type&apos; igual a &quot;Contato&quot;</b>.
         As outras op&#xE7;&#xF5;es s&#xE3;o para registrar v&#xE1;rios tipos de
-        endere&#xE7;os. Pensar em primeiro importar o contato &apos;pai&apos; (com
-        &apos;type&apos; igual a &quot;Contato&quot;) antes de importar os endere&#xE7;os
-        &apos;filhos&apos; (com outro valor de &apos;type&apos;)</td>
+        endere&#xE7;os de um contato. Pensar em primeiro importar esse contato
+        &apos;pai&apos; (com &apos;type&apos; igual a &quot;Contato&quot;) antes
+        de importar os endere&#xE7;os &apos;filhos&apos; (com o valor de &apos;type&apos;
+        escolhido)</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>parent_id/id</b>
@@ -179,26 +188,29 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
         </p>
         <p></p>
         <p>Esse <em>C&#xF3;digo de Pa&#xED;s/L&#xED;ngua</em> n&#xE3;o &#xE9; para
-          ser confundido com o <em>C&#xF3;digo ISO</em> ou do <em>External ID </em>do
+          ser confundido com o <em>C&#xF3;digo ISO</em> ou o <em>External ID </em>do
           idioma !</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>category_id/id</b>
       </td>
-      <td style="text-align:left"><em>External ID </em>dos Marcadores do Contato.
-        <br />
+      <td style="text-align:left"><em>External ID </em>dos <a href="importar-contatos.md#marcadores-de-contato-ou-tags-do-contato-ou-categoria-de-contato">Marcadores do Contato</a>.
+        <br
+        />
         <br />Para dar v&#xE1;rios Marcadores ao mesmo contato, <a href="https://www.odoo.com/documentation/user/12.0/general/base_import/import_faq.html#how-can-i-import-a-many2many-relationship-field-e-g-a-customer-that-has-multiple-tags">informar todos os <em>External ID</em> desejados separados por uma coma &quot;,&quot; sem espa&#xE7;o</a>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>property_product_pricelist/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><em>External ID </em>da &quot;<a href="importar-contatos.md#lista-de-precos"><em>Lista de pre&#xE7;o</em></a>&quot;
+        do Contato.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>property_account_position_id/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><em>External ID da &quot;</em><a href="importar-contatos.md#posicoes-fiscais"><em>Posi&#xE7;&#xE3;o Fiscal</em></a><em>&quot; </em>do
+        Contato.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>property_account_receivable_id/id</b>
@@ -231,7 +243,8 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">compte bancaire</td>
+      <td style="text-align:left"><b>bank_ids/id</b>
+      </td>
       <td style="text-align:left"></td>
     </tr>
   </tbody>
