@@ -64,7 +64,7 @@ A relação pai/filho mais frequente nos objetos 'Contatos' é entre uma empresa
 Então para importar endereços específicos de um contato é preciso **primeiro importar o contato 'pai' e depois importar o endereço 'filho'** desse contato \(cf o campo "type" do arquivo Excel de importação\)
 {% endhint %}
 
-Segue uma lista dos campos interessantes para uma importação de Contatos com todas as relações possíveis :
+Segue uma lista dos campos interessantes para uma importação de Contatos com todas as relações possíveis com os outros objetos Odoo :
 
 <table>
   <thead>
