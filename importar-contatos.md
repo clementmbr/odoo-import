@@ -61,7 +61,7 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">T&#xED;tulo coluna</th>
+      <th style="text-align:left">T&#xED;tulo da coluna do arquivo .xls</th>
       <th style="text-align:left">Conte&#xFA;do</th>
     </tr>
   </thead>
@@ -146,8 +146,8 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
         <p></p>
         <p>Para acessar &#xE0; lista completa de todos os <em>External ID </em>dos
           pa&#xED;ses registrados no banco de dado do Odoo, ir na p&#xE1;gina dos
-          objetos &quot;pa&#xED;ses&quot; pelo menu <em>Contatos</em> &gt; <em>Configura&#xE7;&#xE3;o</em> &gt; <em>Pa&#xED;ses</em>,
-          e <b>exportar</b> os pa&#xED;ses desejados com o seu respectivo nome e <em>External ID</em>.</p>
+          objetos do tipo &quot;Pa&#xED;s&quot; pelo menu <em>Contatos</em> &gt; <em>Configura&#xE7;&#xE3;o</em> &gt; <em>Pa&#xED;ses</em>,
+          e <b>exportar</b> os pa&#xED;ses desejados com o seu respectivo nomes e <em>External ID</em>.</p>
       </td>
     </tr>
     <tr>
@@ -160,19 +160,35 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
         <p></p>
         <p>Para acessar &#xE0; lista completa de todos os <em>External ID </em>dos
           estados registrados no banco de dado do Odoo, ir na p&#xE1;gina dos objetos
-          &quot;Estados&quot; pelo menu <em>Contatos</em> &gt; <em>Configura&#xE7;&#xE3;o</em> &gt; <em>Estados</em>,
-          e <b>exportar</b> os estados desejados com o seu respectivo nome e <em>External ID</em>.</p>
+          do tipo &quot;Estado&quot; pelo menu <em>Contatos</em> &gt; <em>Configura&#xE7;&#xE3;o</em> &gt; <em>Estados</em>,
+          e <b>exportar</b> os estados desejados com os seus respectivos nomes e <em>External ID</em>.</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>lang</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p><em>C&#xF3;digo de Pa&#xED;s/L&#xED;ngua </em>do idioma do contato. &quot;<b>pt_BR</b>&quot;
+          se for portugu&#xEA;s do brasil, &quot;<b>en_US</b>&quot; se for ingl&#xEA;s
+          americano.</p>
+        <p></p>
+        <p>Para acessar &#xE0; lista completa de todos os <em>C&#xF3;digo de Pa&#xED;s/L&#xED;ngua</em> dos
+          idiomas registrados no banco de dado do Odoo, ir na p&#xE1;gina dos objetos
+          do tipo &quot;Idioma&quot; pelo menu <em>Configura&#xE7;&#xF5;es</em> &gt; <em>Tradu&#xE7;&#xF5;es</em> &gt; <em>Idiomas</em>,
+          e <b>exportar</b> os idiomas desejados com os seus respectivos nomes e <em>C&#xF3;digo de Pa&#xED;s/L&#xED;ngua.</em>
+        </p>
+        <p></p>
+        <p>Esse <em>C&#xF3;digo de Pa&#xED;s/L&#xED;ngua</em> n&#xE3;o &#xE9; para
+          ser confundido com o <em>C&#xF3;digo ISO</em> ou do <em>External ID </em>do
+          idioma !</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>category_id/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><em>External ID </em>dos Marcadores do Contato.
+        <br />
+        <br />Para dar v&#xE1;rios Marcadores ao mesmo contato, <a href="https://www.odoo.com/documentation/user/12.0/general/base_import/import_faq.html#how-can-i-import-a-many2many-relationship-field-e-g-a-customer-that-has-multiple-tags">informar todos os <em>External ID</em> desejados separados por uma coma &quot;,&quot; sem espa&#xE7;o</a>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>property_product_pricelist/id</b>
