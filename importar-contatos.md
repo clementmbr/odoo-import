@@ -80,6 +80,10 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
       <td style="text-align:left">
         <p><em>External ID</em> dado ao contato importado.</p>
         <p>Se deixar vazio o Odoo criar&#xE1; um automaticamente.</p>
+        <p></p>
+        <p>&#xC9; importante preencher manualmente esse campo para os contatos &apos;pai&apos;.
+          O <em>External ID</em> definido nesse momento ser&#xE1; usado num segundo
+          tempo durante a importa&#xE7;&#xE3;o dos contatos &apos;filhos&apos;.</p>
       </td>
     </tr>
     <tr>
