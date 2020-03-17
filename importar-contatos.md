@@ -4,17 +4,17 @@ O video oficial da Odoo S.A. é um bom primeiro passo caso estiver descobrindo a
 
 {% embed url="https://youtu.be/BDcVuozHrOg" %}
 
-O único campo obrigatório para a criação de um Contato é o _Nome_, por isso é teoricamente possível importar um arquivo com apenas uma lista de nomes e criar simplesmente centenas de Contatos.
+O único campo obrigatório para a criação de um Contato é o _Nome_, por isso é teoricamente possível importar um arquivo com apenas uma lista de nomes e criar facilmente centenas de Contatos.
 
-Porém, um _Contato_ em Odoo pode apontar para vários outros objetos Odoo. Por isso, como a gente indicou na introdução, é necessário [importar primeiramente todos esses objetos antes de finalmente importar os Contatos](./#como-importar-relacoes-entre-objetos) com o External ID de cada objeto com qual cada Contato estiver relacionado.
+Porém, um _Contato_ em Odoo pode apontar para vários outros objetos Odoo. Por isso, como a gente indicou na introdução, é necessário [importar primeiramente todos esses objetos antes de finalmente importar os Contatos](./#como-importar-relacoes-entre-objetos) indicando o External ID de cada objeto com qual cada Contato estará relacionado.
 
 ## Importações anteriores aos Contatos
 
-O método básico para importar qualquer objeto em Odoo é de primeiro exportar um arquivo de uma lista de objetos com a opção '_Update data \(import-compatible export\)_' e a lista dos campos que a gente quer importar :
+O método básico para importar qualquer objeto em Odoo é de **primeiro exportar** um arquivo .xls de uma lista de objetos com a opção '_Update data \(import-compatible export\)_' e a lista dos campos que você quer importar :
 
 ![](.gitbook/assets/image%20%281%29.png)
 
-Para depois criar seu próprio arquivo Excel de importação seguindo os títulos das colunas exportadas e o formato de cada conteúdo.
+Uma vez que você tiver exportado esse arquivo .xls, você pode preencher esse mesmo arquivo com os dados para ser importados, usando os mesmos títulos das colunas.
 
 Segue a lista exaustiva dos objetos Odoo a ser importados antes da importação de Contatos, indicando cada vez a onde encontrar esse objeto na interface de Odoo.
 
