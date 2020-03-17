@@ -64,7 +64,7 @@ Basta clicar no botão _Import_ &gt; _Carregar Arquivo_ da página '_Tags do Con
 ![](.gitbook/assets/image%20%287%29.png)
 
 {% hint style="info" %}
-Caso não preencher a casa "External ID", Odoo criará-lo automaticamente e importará o objeto mesmo assim.
+Caso não preencher a casa "_External ID_", Odoo criará-lo automaticamente e importará o objeto mesmo assim.
 {% endhint %}
 
 Podemos verificar pela interface que o _External ID_ de cada _Marcador_  importado corresponde à cadeia de caracteres indicada no arquivo de importação. Será então possível usar esse mesmo _External ID_ no futuro, por exemplo durante a importação dos Contatos para indicar o _Marcador_ de cada _Contato_ :
