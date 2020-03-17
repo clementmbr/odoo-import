@@ -6,7 +6,7 @@ O video oficial da Odoo S.A. é um bom primeiro passo caso estiver descobrindo a
 
 O único campo obrigatório para a criação de um Contato é o _Nome_, por isso é teoricamente possível importar um arquivo com apenas uma lista de nomes e criar facilmente centenas de Contatos.
 
-Porém, um _Contato_ em Odoo pode apontar para vários outros objetos Odoo. Por isso, como a gente indicou na introdução, é necessário [importar primeiramente todos esses objetos antes de finalmente importar os Contatos](./#como-importar-relacoes-entre-objetos) indicando o External ID de cada objeto com qual cada Contato estará relacionado.
+Porém, um _Contato_ em Odoo pode apontar para vários outros objetos Odoo. Por isso, como a gente indicou na introdução, é necessário [importar primeiramente todos esses objetos antes de finalmente importar os Contatos](./#como-importar-relacoes-entre-objetos) indicando o _External ID_ de cada objeto com qual cada _Contato_ estará relacionado.
 
 ## Importações anteriores aos Contatos
 
@@ -51,7 +51,7 @@ Seguindo as etapas que a gente viu [na introdução](./#criacao-do-external-id-d
 [Como explicamos na introdução](./#relacao-pai-filho), é importante realizar em primeiro a importação dos Contatos "pai" \(como uma empresa\) e depois os Contatos "filho" \(como os membros de uma empresa\) ligados aos Contatos "pai" pelo External ID desses.
 
 {% hint style="info" %}
-A relação pai/filho mais frequente nos objetos 'Contatos' é entre uma empresa 'pai' e um empregado 'filho'. Mas é bom anotar que os endereços \(tipo endereço para envio ou endereço de cobrança\) são também registrados como objetos '_Contato_' no banco de dado do Odoo.
+A relação pai/filho mais frequente nos objetos 'Contatos' é entre uma empresa 'pai' e um empregado 'filho'. Mas é bom anotar que os endereços \(como o endereço para envio ou o endereço de cobrança\) são também registrados como objetos '_Contato_' no banco de dado do Odoo.
 
 Então para importar endereços específicos de um contato é preciso **primeiro importar o contato 'pai' e depois importar o endereço 'filho'** desse contato \(cf o campo "type" do arquivo Excel de importação\)
 {% endhint %}
