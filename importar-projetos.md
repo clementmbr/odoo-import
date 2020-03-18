@@ -15,7 +15,7 @@ Como qualquer outro objeto Odoo, o processo para importar um projeto é de [prim
 
 ![](.gitbook/assets/image%20%2817%29.png)
 
-Entendemos que **um projeto é composto de Tarefas**, por isso, como para qualquer importação de objetos Odoo relacionados, é importante importar primeiro os projetos e num segundo tempo as tarefas, [cada tarefa sendo relacionada ao seu projeto pelo _External ID_ do projeto](./#como-importar-relacoes-entre-objetos).
+Entendemos que **um projeto é composto de Tarefas**, por isso, como para qualquer importação de objetos Odoo relacionados, é importante importar primeiro os _Projetos_ e num segundo tempo as _Tarefas_, [cada Tarefa sendo relacionada ao seu projeto pelo _External ID_ do projeto](./#como-importar-relacoes-entre-objetos).
 
 Uma lista de campos interessante para importar pode ser :
 
