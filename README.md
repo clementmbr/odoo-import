@@ -1,175 +1,102 @@
 # Funcionamento básico
 
+Para importar dados no Odoo, basta clicar no botão _Import_ da página do tipo de objeto desejado.
+
+![](.gitbook/assets/image%20%2825%29.png)
+
+A complexidade da importação de dados no Odoo vem da complexidade em registrar em Odoo **as relações** entre os objetos importados.
+
+## Como importar relações entre objetos ?
+
+Um exemplo : um dos campos de um _Contato_ é o campo _Marcadores_ \(chamado também de "categoria de contato", ou "Tag do contato"\). Para associar cada contato importado com um Marcador específico teremos que :
+
+1.  Importar todos os _Marcadores_ **antes** de importar os _Contatos_.
+2. Durante a importação dos _Contatos_ teremos que indicar os _**External ID**_ dos _Marcadores_  de cada _Contato_ importado, para indicar qual _Marcador_ vai ser associado a qual _Contato_.
+
+O _External ID_, chamado também de _**XML ID**_, é o identificador de um objeto presente em Odoo. Ele permite permite fazer a diferença por exemplo entre dois _Marcadores_ que teriam o mesmo nome no Odoo apesar de ser dois objetos distintos do mesmo tipo _'Marcador'_.
+
 {% hint style="info" %}
-Para facilitar o processo de importação, é necessário instalar no mínimo ambos :
+É importante anotar a [diferença entre o External ID de um de um objeto e o ID no banco de dados](https://www.odoo.com/documentation/user/12.0/general/base_import/import_faq.html#what-s-the-difference-between-database-id-and-external-id) desse mesmo objeto.
 
-* o aplicativo "Projeto" \(`project`\) a base da gestão de projetos
-* e "Task Logs" \(`hr_timesheet`\) para a gestão do tempo nos projetos
-
-É apenas quando os dois módulos estiverem instalados que a visão em "lista" dos projetos é possível, [permitindo a exportação dos projetos atuais](./#external-id-na-exportacao).
+Os dois são um identificador único do mesmo objeto, porém o ID no banco de dados é um **número** \(único\) dado automaticamente por Odoo quando cria \(ou importa\) esse novo objeto, enquanto o External ID é uma **cadeia de caracteres** que pode ser dada pelo usuário durante a importação do objeto.
 {% endhint %}
 
-## Importar o _Projeto_
+É possível conhecer o External ID de um objeto diretamente pela **interface** do Odoo ou quando **exporta** dados Odoo para arquivos \(Excel ou CSV\).
 
-Como qualquer outro objeto Odoo, o processo para importar um projeto é de [primeiro exportar alguns projetos](importar-contatos.md#importacoes-anteriores-aos-contatos) atuais, com a lista dos campos que você deseja importar num segundo tempo, com a opção "_Update data \(import-compatible export\)_" e o formato Excel.
+## _External ID_ pela interface
 
-![](.gitbook/assets/image%20%2817%29.png)
+Primeiro precisa ativar o modo "desenvolvedor" do Odoo no painel de Configurações gerais :
 
-Entendemos que **um** _**Projeto**_ **é composto de** _**Tarefas**_, por isso, como para qualquer importação de objetos Odoo relacionados, é importante importar primeiro os _Projetos_ e num segundo tempo as _Tarefas_, [cada _Tarefa_ sendo relacionada ao seu _Projeto_ pelo _External ID_ do projeto](./#como-importar-relacoes-entre-objetos).
+![](.gitbook/assets/image%20%2813%29.png)
 
-Uma lista de campos interessante para importar pode ser :
+Depois ir na página do objeto desejado, por exemplo esse Marcador de contato \(chamado também de "Tag do contato", acessível pelo menu _Contatos_ &gt; _Configuração_ &gt; _Tags do contato_\), clicar na barata que apareceu \(encima na direita\), e abrir _Visualizar Metadata_ do objeto corrente :
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">T&#xED;tulo da coluna do arquivo .xls</th>
-      <th style="text-align:left">Conte&#xFA;do</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>id</b>
-      </td>
-      <td style="text-align:left">
-        <p><em>External ID</em> dado ao <em>Projeto</em> importado.</p>
-        <p>Se deixar vazio o Odoo criar&#xE1; um automaticamente.</p>
-        <p></p>
-        <p>&#xC9; importante preencher manualmente esse campo para controlar e conhecer
-          o valor desse <em>External ID</em>. Ele ser&#xE1; usado num segundo tempo
-          durante a importa&#xE7;&#xE3;o das <em>Tarefas</em>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>name</b>
-      </td>
-      <td style="text-align:left">Nome do <em>Projeto</em>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>user_id/id</b>
-      </td>
-      <td style="text-align:left">
-        <p><em>External ID</em> do <em>Gerente do Projeto</em> (um <em>Usu&#xE1;rio</em> de
-          Odoo)</p>
-        <p>&lt;em&gt;&lt;/em&gt;</p>
-        <p>Para conhecer-lo acessar &#xE0; pagina dos usu&#xE1;rios pelo menu <em>Configura&#xE7;&#xF5;es</em> &gt; <em>Utilizadores e Empresas</em> &gt; <em>Usu&#xE1;rios</em> e
-          s<a href="./#como-importar-relacoes-entre-objetos">eguir as instru&#xE7;&#xF5;es da introdu&#xE7;&#xE3;o.</a>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>partner_id/id</b>
-      </td>
-      <td style="text-align:left"><em>External ID</em> do <em>Cliente do Projeto</em> (um <em>Contato</em> de
-        Odoo)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>analytic_account_id/id</b>
-      </td>
-      <td style="text-align:left">
-        <p><em>External ID</em> da <em>Conta Anal&#xED;tica do Projeto</em>
-        </p>
-        <p>&lt;em&gt;&lt;/em&gt;</p>
-        <p>As <em>Contas Anal&#xED;ticas</em> se encontram no menu <em>Faturamento</em> &gt; <em>Configura&#xE7;&#xE3;o</em> &gt; <em>Contas Anal&#xED;ticas</em>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>privacy_visibility</b>
-      </td>
-      <td style="text-align:left">
-        <p>Escolher entre :</p>
-        <ul>
-          <li>&quot;followers&quot;</li>
-          <li>&quot;employees&quot;</li>
-          <li>&quot;portal&quot;</li>
-        </ul>
-        <p><a href="importar-projetos.md#sobre-a-privacidade">cf a significa&#xE7;&#xE3;o desses 3 campos</a>
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>### Sobre as Contas Analíticas
+![](.gitbook/assets/image.png)
 
-Odoo cria uma _Conta Analítica_ com o mesmo nome que o _Projeto_ **automaticamente** cada vez que você criar um _Projeto_ manualmente ou quand você importa um _Projeto_ sem preencher a coluna "_analytic\_account\_id/id_".
+Aparece então as suas Metadatas, incluindo o **ID XML** \(outro nome para o External ID\), diferente  do ID 'simples' que é o identificador do objeto no banco de dados \(que não precisamos usar\) :
 
-Então você precisa criar uma _Conta Analítica_ previamente e informar o valor do _External ID_ dessa conta no arquivo de importação de projeto **apenas** se você quiser relacionar dois projetos \(ou mais\) com a mesma _Conta Analítica_.
+![](.gitbook/assets/image%20%2821%29.png)
 
-**Se o menu** _**Contas Analíticas**_ **não aparecer** no menu _Faturamento_ &gt; _Configuração_, pensar em ativar a configuração "_Contabilidade Analíticas_" do seu usuário, acessando pelo menu _Configurações_ &gt; _Utilizadores e Empresas_ &gt; _Usuários_, sem esquecer de [ativar o modo desenvolvedor](./#external-id-pela-interface) para todos os campos aparecerem.
+## _External ID_ na exportação
 
-![](.gitbook/assets/image%20%2816%29.png)
+Para exportar dados do Odoo para arquivos Excel \(ou CSV\), é preciso fazer aparecer os objetos para ser exportados em visualização '**lista**'. Isso permite selecionar os objetos para serem exportados. Quando selecionar um objeto aparece o botão **Ação** que permite, entre outras coisas, exportar os dados dos objetos selecionados :
 
-### Sobre a privacidade
+![](.gitbook/assets/image%20%286%29.png)
 
-Esse campo detém a visibilidade das tarefas ou incidências que pertencem ao projeto :
+Ao exportar _Marcadores_ de contato, para seguir o nosso exemplo, basta selecionar a opção '_Update data_' para fazer aparecer o campo '_ID Externo_' dentro dos campos disponíveis :
 
-* '**followers**' = 'Somente convidados' : Empregados podem ver somente os projetos seguidos, tarefas ou incidências
-* '**employees**' = 'Visível por todos os empregados' : Empregados podem ver todos os projetos, tarefas e incidências
-* '**portal**' = 'Visível pelos clientes que seguem' : empregados veem tudo. Se o website está ativado, usuários do portal podem ver projetos, tarefas e incidências que são seguidas por eles ou alguém de sua companhia
+![](.gitbook/assets/image%20%2822%29.png)
 
-## Importar as Tarefas
+O resultado é um arquivo Excel com a lista dos _External ID_ de cada _Marcador_ :
 
-Além de relacionar uma _Tarefa_ a um _Projeto_ é necessário relacionar cada _Tarefa_ a um _**Estágio**_ de andamento.
+![](.gitbook/assets/image%20%2815%29.png)
 
-Para encontrar o [_External ID_](./#external-id-pela-interface) __ dos Estágios, ir no menu _Projetos_ &gt; _Configuração_ &gt; _Estágios :_
+## Criação do _External ID_ durante a importação
 
-![](.gitbook/assets/image%20%287%29.png)
+A força desse _External ID_  é que ele pode ser dado a um objeto pelo usuário durante a importação.
 
-Segue uma lista de campos para importar _Tarefas_ de _Projetos_ :
+Por exemplo, se eu importar o seguinte arquivo Excel :
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">T&#xED;tulo da coluna</th>
-      <th style="text-align:left">Conte&#xFA;do</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>id</b>
-      </td>
-      <td style="text-align:left">
-        <p><em>External ID</em> dado &#xE0; <em>Tarefa</em> importada.</p>
-        <p>Se deixar vazio o Odoo criar&#xE1; um automaticamente.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>name</b>
-      </td>
-      <td style="text-align:left">Nome da <em>Tarefa</em>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>planned_hours</b>
-      </td>
-      <td style="text-align:left">N&#xFA;mero de horas planejadas para a realiza&#xE7;&#xE3;o da <em>Tarefa</em>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>user_id/id</b>
-      </td>
-      <td style="text-align:left">
-        <p><em>External ID</em> do <em>Gerente do Projeto</em> (um <em>Usu&#xE1;rio</em> de
-          Odoo)</p>
-        <p>&lt;em&gt;&lt;/em&gt;</p>
-        <p>Para conhecer-lo acessar &#xE0; pagina dos usu&#xE1;rios pelo menu <em>Configura&#xE7;&#xF5;es</em> &gt; <em>Utilizadores e Empresas</em> &gt; <em>Usu&#xE1;rios</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>project_id/id</b>
-      </td>
-      <td style="text-align:left"><em>External ID </em>do<em> Projeto</em>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>stage_id/id</b>
-      </td>
-      <td style="text-align:left"><em>External ID </em>do<em> Est&#xE1;gio </em>de andamento</td>
-    </tr>
-  </tbody>
-</table>{% hint style="info" %}
-Caso importar uma _Tarefa_ com um _Estágio_ que já existe mas que não é presente no _Projeto_ específico da _Tarefa_, o _Estágio_ aparecerá daqui em diante nesse _Projeto_.
+![](.gitbook/assets/image%20%2819%29.png)
+
+Basta clicar no botão _Import_ &gt; _Carregar Arquivo_ da página '_Tags do Contato_' e selecionar o arquivo para importar. Odoo reconhece o significação das colunas do meu arquivo mas é sempre possível escolher manualmente o destino de cada uma :
+
+![](.gitbook/assets/image%20%288%29.png)
+
+{% hint style="info" %}
+Caso não preencher a coluna "_External ID_", Odoo criará-lo automaticamente e importará o objeto mesmo assim.
 {% endhint %}
+
+Podemos verificar pela interface que o _External ID_ de cada _Marcador_  importado corresponde à cadeia de caracteres indicada no arquivo de importação. Será então possível usar esse mesmo _External ID_ no futuro, por exemplo durante a importação dos Contatos para indicar o _Marcador_ de cada _Contato_ :
+
+![](.gitbook/assets/image%20%2823%29.png)
+
+## Relação pai / filho
+
+Na mesma ideia que para importar a informação da relação entre dois objetos de tipos diferentes, o jeito mais simples e seguro de importar as relações entre dois objetos do mesmo tipo é de :
+
+1. importar os pais
+2. importar os filhos, indicando para cada filho o External ID do\(s\) pai\(s\) previamente importados
+
+Por exemplo, importando o arquivo :
+
+![](.gitbook/assets/image%20%284%29.png)
+
+Eu vou poder importar 2 _Marcadores_ como sub-categorias de contato da categoria pai "_Meu Marcador importado 1_" :
+
+![](.gitbook/assets/image%20%2818%29.png)
+
+{% hint style="info" %}
+Na teoria é possível importar junto no mesmo arquivo .xls ou .CSV os objetos pai e filho de uma vez. Porém é mais complexo e é fonte de erros, por isso recomendamos de realizar esse tipo de importações pai/filho em duas vezes.
+{% endhint %}
+
+## FAQ oficial da Odoo S.A.
+
+Para questões técnicas específicas sobre a importação :
+
+{% embed url="https://www.odoo.com/documentation/user/12.0/general/base\_import/import\_faq.html" %}
+
+
 
 
 
