@@ -28,7 +28,7 @@ Segue a lista exaustiva dos objetos Odoo a ser importados antes da importação 
 
 ### Condições de Pagamento
 
-![](.gitbook/assets/image%20%2821%29.png)
+![](.gitbook/assets/image%20%2824%29.png)
 
 ### Posições Fiscais
 
@@ -36,7 +36,7 @@ Uma _Posição Fiscal_ é uma tabela que faz a relação entre uma taxa e uma ou
 
 É possível definir ou encontrar a lista das _Posições fiscais_ no menu _Faturamento &gt; Configuração :_
 
-![](.gitbook/assets/image%20%2811%29.png)
+![](.gitbook/assets/image%20%2812%29.png)
 
 ### Lista de preços
 
@@ -44,7 +44,7 @@ Uma "_Lista de preço_" é o nome de objeto Odoo enganosamente escolhido para di
 
 É possível definir ou encontrar a lista dessas "_Lista de preços_" clicando embaixo da opção "_Múltiplos Preços de Venda por Produto_" nas _Configurações_ do aplicativo de Vendas :
 
-![](.gitbook/assets/image%20%289%29.png)
+![](.gitbook/assets/image%20%2810%29.png)
 
 ### Marcadores de Contato \(ou "Tags do Contato", ou "categoria de Contato"\)
 
@@ -52,7 +52,7 @@ Seguindo as etapas que a gente viu [na introdução](./#criacao-do-external-id-d
 
 ### Tratamento para o contato
 
-![](.gitbook/assets/image%20%288%29.png)
+![](.gitbook/assets/image%20%289%29.png)
 
 ## Importação dos contatos
 
@@ -130,20 +130,23 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
     <tr>
       <td style="text-align:left"><b>type</b>
       </td>
-      <td style="text-align:left">Escolher entre :
-        <br />- &quot;Contato&quot;
-        <br />- &quot;Endere&#xE7;o de Cobran&#xE7;a&quot;
-        <br />- &quot;Endere&#xE7;o para envio:&quot; <em>(com os &quot;:&quot; no final)</em>
-        <br
-        />- &quot;Endere&#xE7;o privado&quot;
-        <br />- &quot;Outro endere&#xE7;o&quot;
-        <br />
-        <br /><b>Uma pessoa f&#xED;sica ou uma empresa ser&#xE1; sempre com &apos;type&apos; igual a &quot;Contato&quot;</b>.
-        As outras op&#xE7;&#xF5;es s&#xE3;o para registrar v&#xE1;rios tipos de
-        endere&#xE7;os de um contato. Pensar em primeiro importar esse contato
-        &apos;pai&apos; (com &apos;type&apos; igual a &quot;Contato&quot;) antes
-        de importar os endere&#xE7;os &apos;filhos&apos; (com o valor de &apos;type&apos;
-        escolhido)</td>
+      <td style="text-align:left">
+        <p>Escolher entre :</p>
+        <ul>
+          <li>&quot;Contato&quot;</li>
+          <li>&quot;Endere&#xE7;o de Cobran&#xE7;a&quot;</li>
+          <li>&quot;Endere&#xE7;o para envio:&quot; <em>(com os &quot;:&quot; no final)</em>
+          </li>
+          <li>&quot;Endere&#xE7;o privado&quot;</li>
+          <li>&quot;Outro endere&#xE7;o&quot;</li>
+        </ul>
+        <p><b>Uma pessoa f&#xED;sica ou uma empresa ser&#xE1; sempre com &apos;type&apos; igual a &quot;Contato&quot;</b>.
+          As outras op&#xE7;&#xF5;es s&#xE3;o para registrar v&#xE1;rios tipos de
+          endere&#xE7;os de um contato. Pensar em primeiro importar esse contato
+          &apos;pai&apos; (com &apos;type&apos; igual a &quot;Contato&quot;) antes
+          de importar os endere&#xE7;os &apos;filhos&apos; (com o valor de &apos;type&apos;
+          escolhido)</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>parent_id/id</b>
