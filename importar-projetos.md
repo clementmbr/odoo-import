@@ -11,11 +11,11 @@ Para facilitar o processo de importação, é necessário instalar no mínimo am
 
 ## Importar o projeto
 
-Como qualquer outro objeto Odoo, o processo para importar um projeto é de [primeiro exportar alguns projetos](importar-contatos.md#importacoes-anteriores-aos-contatos) atuais, com a lista dos campos que você deseja importar num segundo tempo, com a opção "_Update data \(import-compatible export\)_" e o formato Excel.
+Como qualquer outro objeto Odoo, o processo para importar um projeto é de [primeiro exportar alguns projetos](importar-contatos.md#importacoes-anteriores-aos-contatos) atuais com a lista dos campos que você deseja importar com a opção "_Update data \(import-compatible export\)_" e o formato Excel.
 
 ![](.gitbook/assets/image%20%2817%29.png)
 
-Entendemos que **um projeto é composto de Tarefas**, por isso, como para qualquer importação de objetos Odoo relacionados, é importante importar primeiro os _Projetos_ e num segundo tempo as _Tarefas_, [cada Tarefa sendo relacionada ao seu projeto pelo _External ID_ do projeto](./#como-importar-relacoes-entre-objetos).
+Entendemos que **um** _**Projeto**_ **é composto de** _**Tarefas**_, por isso, como para qualquer importação de objetos Odoo relacionados, é importante importar primeiro os _Projetos_ e num segundo tempo as _Tarefas_, [cada _Tarefa_ sendo relacionada ao seu _Projeto_ pelo _External ID_ do _Projeto_](./#como-importar-relacoes-entre-objetos).
 
 Uma lista de campos interessante para importar pode ser :
 
@@ -35,8 +35,7 @@ Uma lista de campos interessante para importar pode ser :
         <p>Se deixar vazio o Odoo criar&#xE1; um automaticamente.</p>
         <p></p>
         <p>&#xC9; importante preencher manualmente esse campo para controlar e conhecer
-          o valor desse <em>External ID</em>. Ele ser&#xE1; usado num segundo tempo
-          durante a importa&#xE7;&#xE3;o das <em>Tarefas</em>.</p>
+          o valor desse <em>External ID</em>. Ele ser&#xE1; <a href="./#como-importar-relacoes-entre-objetos">usado num segundo tempo durante a importa&#xE7;&#xE3;o das <em>Tarefas</em></a>.</p>
       </td>
     </tr>
     <tr>
@@ -53,7 +52,8 @@ Uma lista de campos interessante para importar pode ser :
           Odoo)</p>
         <p>&lt;em&gt;&lt;/em&gt;</p>
         <p>Para conhecer-lo acessar &#xE0; pagina dos usu&#xE1;rios pelo menu <em>Configura&#xE7;&#xF5;es</em> &gt; <em>Utilizadores e Empresas</em> &gt; <em>Usu&#xE1;rios</em> e
-          s<a href="./#como-importar-relacoes-entre-objetos">eguir as instru&#xE7;&#xF5;es da introdu&#xE7;&#xE3;o.</a>
+          <a
+          href="./#external-id-pela-interface">seguir as instru&#xE7;&#xF5;es da introdu&#xE7;&#xE3;o.</a>
         </p>
       </td>
     </tr>
@@ -83,7 +83,7 @@ Uma lista de campos interessante para importar pode ser :
           <li>&quot;employees&quot;</li>
           <li>&quot;portal&quot;</li>
         </ul>
-        <p><a href="importar-projetos.md#sobre-a-privacidade">cf a significa&#xE7;&#xE3;o desses 3 campos</a>
+        <p><a href="importar-projetos.md#sobre-a-privacidade">Confere a significa&#xE7;&#xE3;o desses 3 campos</a>
         </p>
       </td>
     </tr>
