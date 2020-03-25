@@ -91,9 +91,9 @@ Na teoria é possível importar junto no mesmo arquivo .xls ou .CSV os objetos f
 {% endhint %}
 
 {% hint style="info" %}
-Alguns objetos Odoo podem ter 2 pais ou mais \(o tipo de campo ligando um filho aos seus pais é então chamado de "_one2many_" ou "_many2many_"\).
+Alguns objetos Odoo podem ter **2 pais ou mais** \(o tipo de campo ligando um filho aos seus pais é então chamado de "_one2many_" ou "_many2many_"\), como os marcadores de Contato por exemplo.
 
-Nesta situação é só indicar os 2 \(ou mais\) External ID, separados por um coma, sem espaço. Exemplo :
+Nesta situação é só indicar os 2 \(ou mais\) External ID, separados por **um coma, sem espaço**. Exemplo :
 
 _marcador\_de\_contato\_1,marcardor\_de\_contato2_
 {% endhint %}
