@@ -87,7 +87,15 @@ Eu vou poder importar 2 _Marcadores_ como sub-categorias de contato da categoria
 ![](.gitbook/assets/image%20%2818%29.png)
 
 {% hint style="info" %}
-Na teoria é possível importar junto no mesmo arquivo .xls ou .CSV os objetos pai e filho de uma vez. Porém é mais complexo e é fonte de erros, por isso recomendamos de realizar esse tipo de importações pai/filho em duas vezes.
+Na teoria é possível importar junto no mesmo arquivo .xls ou .CSV os objetos filhos e os pais relacionados de uma vez. Porém é mais complexo e é fonte de erros, por isso recomendamos de realizar esse tipo de importações pai/filho em duas vezes.
+{% endhint %}
+
+{% hint style="info" %}
+Alguns objetos Odoo podem ter 2 pais ou mais \(o tipo de campo ligando um filho aos seus pais é então chamado de "_one2many_" ou "_many2many_"\).
+
+Nesta situação é só indicar os 2 \(ou mais\) External ID, separados por um coma, sem espaço. Exemplo :
+
+_marcador\_de\_contato\_1,marcardor\_de\_contato2_
 {% endhint %}
 
 ## FAQ oficial da Odoo S.A.
