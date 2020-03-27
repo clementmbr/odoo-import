@@ -98,6 +98,10 @@ Nesta situação é só indicar os 2 \(ou mais\) External ID, separados por **um
 _marcador\_de\_contato\_1,marcardor\_de\_contato2_
 {% endhint %}
 
+{% hint style="warning" %}
+Se um filho para importar não tem pai, **deixar a célula vazia**. Se escrever "0" ou False vai puxar um erro de importação.
+{% endhint %}
+
 ## FAQ oficial da Odoo S.A.
 
 Para questões técnicas específicas sobre a importação :
