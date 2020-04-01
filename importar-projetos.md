@@ -11,13 +11,13 @@ Para facilitar o processo de importação, é necessário instalar no mínimo am
 
 ## Importar o projeto
 
-Como qualquer outro objeto Odoo, o processo para importar um projeto é de [primeiro exportar alguns projetos](importar-contatos.md#importacoes-anteriores-aos-contatos) atuais com a lista dos campos que você deseja importar com a opção "_Update data \(import-compatible export\)_" e o formato Excel.
+Como qualquer outro objeto Odoo, o processo para importar um projeto é de [primeiro **exportar** alguns projetos](importar-contatos.md#importacoes-anteriores-aos-contatos) atuais com a lista dos campos que você deseja importar com a opção "_Update data \(import-compatible export\)_" e o formato Excel.
 
 ![](.gitbook/assets/image%20%2817%29.png)
 
-Entendemos que **um** _**Projeto**_ **é composto de** _**Tarefas**_, por isso, como para qualquer importação de objetos Odoo relacionados, é importante importar primeiro os _Projetos_ e num segundo tempo as _Tarefas_, [cada _Tarefa_ sendo relacionada ao seu _Projeto_ pelo _External ID_ do _Projeto_](./#como-importar-relacoes-entre-objetos).
+Entendemos que **um** _**Projeto**_ **é composto de** _**Tarefas**_, por isso, como para qualquer importação de objetos Odoo relacionados com outros, é importante importar primeiro os _Projetos_ e num segundo tempo as _Tarefas_, [cada _Tarefa_ sendo relacionada ao seu _Projeto_ pelo _External ID_ do _Projeto_](./#como-importar-relacoes-entre-objetos).
 
-Uma lista de campos interessante para importar pode ser :
+Uma lista de campos interessantes para importar pode ser :
 
 <table>
   <thead>
@@ -168,7 +168,7 @@ Segue uma lista de campos para importar _Tarefas_ de _Projetos_ :
     </tr>
   </tbody>
 </table>{% hint style="info" %}
-Caso importar uma _Tarefa_ com um _Estágio_ que existe mas que não é presente no _Projeto_ específico da _Tarefa_, o _Estágio_ aparecerá daqui em diante nesse _Projeto_.
+Caso importar uma _Tarefa_ com um _Estágio_ que existe no Odoo mas que não é presente no _Projeto_ específico da _Tarefa_, indicar o _External ID_ do _Estágio_ da mesma maneira e o _Estágio_ aparecerá daqui em diante nesse _Projeto_.
 {% endhint %}
 
 
