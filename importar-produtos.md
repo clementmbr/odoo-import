@@ -75,22 +75,41 @@ Cuidando de [importar os _External ID_ dos objetos que jà existem](./#como-impo
     <tr>
       <td style="text-align:left"><b>fiscal_type</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Um n&#xFA;mero entre 00 e 10 determinando o <a href="importar-produtos.md#tipo-fiscal">Tipo Fiscal</a> do
+        produto.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>icms_origin</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Um n&#xFA;mero entre 0 e 8 determinando a <a href="importar-produtos.md#origem-do-icms">Origem do ICMS</a> do
+        produto.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>ncm_id/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p><em>External ID </em>do c&#xF3;digo NCM do Produto. <b>A integralidade dos 10770 c&#xF3;digos de NCM poss&#xED;veis j&#xE1; est&#xE3;o registrados</b> no
+          Odoo com todas as suas caracter&#xED;sticas gra&#xE7;a ao m&#xF3;dulo l10n_br_fiscal
+          da Akretion.
+          <br />&#xC9; poss&#xED;vel encontr&#xE1;-los no menu <em>Fiscal &gt; Configura&#xE7;&#xE3;o &gt; NCM</em>.</p>
+        <p></p>
+        <p>Um <em>External ID </em>de um NCM ser&#xE1; sempre composto de &quot;l10n_br_fiscal.ncm_
+          &quot; e seguido dos 8 n&#xFA;meros do c&#xF3;digo. Por exemplo :</p>
+        <p>&quot;<b>l10n_br_fiscal.ncm_00000000</b>&quot;</p>
+        <p>Para o <em>External ID </em>do NCM dos produtos &quot;sem NCM&quot;.</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>fiscal_genre_id/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p><em>External ID </em>do G&#xEA;nero Fiscal do Produto. Ele se encontra
+          no menu <em>Fiscal &gt; Configura&#xE7;&#xE3;o &gt; G&#xEA;nero de Produto</em>.</p>
+        <p></p>
+        <p>Da mesma maneira que o <em>External ID </em>do NCM, ele &#xE9; do tipo<b> &quot;l10n_br_fiscal.product_genre_94&quot;</b>,
+          os 2 &#xFA;ltimos n&#xFA;meros sendo o c&#xF3;digo do G&#xEA;nero do produto
+          escolhido.</p>
+      </td>
     </tr>
   </tbody>
 </table>## Categoria de Produto
@@ -100,4 +119,49 @@ Cuidando de [importar os _External ID_ dos objetos que jà existem](./#como-impo
 ![](.gitbook/assets/image%20%2821%29.png)
 
 Ou no menu _Inventário &gt; Configurações &gt; Categorias de Produtos_.
+
+## Tipo Fiscal
+
+Escolher o número seguindo o Tipo Fiscal desejado :
+
+| Número | Tipo Fiscal |
+| :--- | :--- |
+| 00 | Mercadoria para Revenda |
+| 01 | Matéria-prima |
+| 02 | Embalagem |
+| 03 | Produto em Processo |
+| 04 | Produto Acabado |
+| 05 | Subproduto |
+| 06 | Produto Intermediário |
+| 07 | Material de Uso e Consumo |
+| 08 | Ativo Imobilizado |
+| 09 | Serviços |
+| 10 | Outros insumos |
+| 99 | Outras |
+
+{% hint style="info" %}
+Esses _Tipos Fiscais_ são constantes no Odoo, **não é possível modificá-los**.
+{% endhint %}
+
+## Origem do ICMS
+
+Escolher o número seguindo o Origem do ICMS desejado :
+
+| Número | Origem do ICMS |
+| :--- | :--- |
+| 0 | 0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8  |
+| 1 | 1 - Estrangeira – importação direta, exceto a indicada no código 6  |
+| 2 | 2 – Estrangeira – adquirida no mercado interno, exceto a indicada no código 7 |
+| 3 | 3 – Nacional – mercadoria ou bem com Conteúdo de Importação superior a 40% \(quarenta por cento\) e inferior ou igual a 70% \(setenta por cento\) |
+| 4 | 4 – Nacional – cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-lei n° 288/67 e as Leis \(federais\) nos 8.428/91, 8.397/91, 10.176/2001 e 11.484/2007 |
+| 5 | 5 – Nacional – mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% \(quarenta por cento\) |
+| 6 | 6 – Estrangeira – importação direta, sem similar nacional, constante em lista de Resolução CAMEX e gás natural |
+| 7 | 7 – Estrangeira – adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX e gás natural |
+| 8 | 8 – Nacional – mercadoria ou bem com Conteúdo de Importação superior a 70% \(setenta por cento\). \(cf. Ajuste SINIEF 15/2013\) |
+
+{% hint style="info" %}
+essas _Origens de ICMS_ são constantes no Odoo, **não é possível modificá-las**.
+{% endhint %}
+
+
 
