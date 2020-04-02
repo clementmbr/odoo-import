@@ -28,7 +28,7 @@ Segue a lista exaustiva dos objetos Odoo a ser importados antes da importação 
 
 ### Condições de Pagamento
 
-![](.gitbook/assets/image%20%2824%29.png)
+![](.gitbook/assets/image%20%2826%29.png)
 
 ### Posições Fiscais
 
@@ -36,7 +36,7 @@ Uma _Posição Fiscal_ é uma tabela que faz a relação entre uma taxa e uma ou
 
 É possível definir ou encontrar a lista das _Posições fiscais_ no menu _Faturamento &gt; Configuração :_
 
-![](.gitbook/assets/image%20%2812%29.png)
+![](.gitbook/assets/image%20%2813%29.png)
 
 ### Lista de preços
 
@@ -44,7 +44,7 @@ Uma "_Lista de preço_" é o nome de objeto Odoo enganosamente escolhido para di
 
 É possível definir ou encontrar a lista dessas "_Lista de preços_" clicando embaixo da opção "_Múltiplos Preços de Venda por Produto_" nas _Configurações_ do aplicativo de Vendas :
 
-![](.gitbook/assets/image%20%2810%29.png)
+![](.gitbook/assets/image%20%2811%29.png)
 
 ### Marcadores de Contato \(ou "Tags do Contato", ou "categoria de Contato"\)
 
