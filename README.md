@@ -2,7 +2,7 @@
 
 Para importar dados no Odoo, basta clicar no botão _Import_ da página do tipo de objeto desejado.
 
-![](.gitbook/assets/image%20%2827%29.png)
+![](.gitbook/assets/image%20%2829%29.png)
 
 A complexidade da importação de dados no Odoo vem da complexidade em registrar em Odoo **as relações** entre os objetos importados.
 
@@ -35,7 +35,7 @@ Depois ir na página do objeto desejado, por exemplo esse Marcador de contato \(
 
 Aparece então as suas Metadatas, incluindo o **ID XML** \(outro nome para o External ID\), diferente  do ID 'simples' que é o identificador do objeto no banco de dados \(que não precisamos usar\) :
 
-![](.gitbook/assets/image%20%2823%29.png)
+![](.gitbook/assets/image%20%2825%29.png)
 
 ## _External ID_ na exportação
 
@@ -45,7 +45,7 @@ Para exportar dados do Odoo para arquivos Excel \(ou CSV\), é preciso fazer apa
 
 Ao exportar _Marcadores_ de contato, para seguir o nosso exemplo, basta selecionar a opção '_Update data_' para fazer aparecer o campo '_ID Externo_' dentro dos campos disponíveis :
 
-![](.gitbook/assets/image%20%2824%29.png)
+![](.gitbook/assets/image%20%2826%29.png)
 
 O resultado é um arquivo Excel com a lista dos _External ID_ de cada _Marcador_ :
 
@@ -57,7 +57,7 @@ A força desse _External ID_  é que ele pode ser dado a um objeto pelo usuário
 
 Por exemplo, se eu importar o seguinte arquivo Excel :
 
-![](.gitbook/assets/image%20%2821%29.png)
+![](.gitbook/assets/image%20%2822%29.png)
 
 Basta clicar no botão _Import_ &gt; _Carregar Arquivo_ da página '_Tags do Contato_' e selecionar o arquivo para importar. Odoo reconhece o significação das colunas do meu arquivo mas é sempre possível escolher manualmente o destino de cada uma :
 
@@ -69,7 +69,7 @@ Caso não preencher a coluna "_External ID_", Odoo criará-lo automaticamente e 
 
 Podemos verificar pela interface que o _External ID_ de cada _Marcador_  importado corresponde à cadeia de caracteres indicada no arquivo de importação. Será então possível usar esse mesmo _External ID_ no futuro, por exemplo durante a importação dos Contatos para indicar o _Marcador_ de cada _Contato_ :
 
-![](.gitbook/assets/image%20%2825%29.png)
+![](.gitbook/assets/image%20%2827%29.png)
 
 ## Relação pai / filho
 
