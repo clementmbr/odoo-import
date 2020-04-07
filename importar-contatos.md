@@ -22,9 +22,11 @@ Segue a lista exaustiva dos objetos Odoo a ser importados antes da importação 
 
 ![](.gitbook/assets/image%20%282%29.png)
 
-### Contas Bancárias
+Entendemos que um Contato vai estar ligado a um Banco e uma Conta Bancária vai estar ligada a ambos um Banco e um Contato. Por isso é preciso importar nesta ordem :
 
-![](.gitbook/assets/image%20%285%29.png)
+1. Os Bancos
+2. Os Contatos
+3. As [Contas Bancárias](importar-contatos.md#contas-bancarias)
 
 ### Condições de Pagamento
 
@@ -255,5 +257,13 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
       <td style="text-align:left"></td>
     </tr>
   </tbody>
-</table> 
+</table>##  Importação posteriores aos contatos
+
+Todos os objetos que precisam estar ligados a um contato, como por exemplo as Contas Bancarias :
+
+### Contas Bancárias
+
+![](.gitbook/assets/image%20%285%29.png)
+
+### 
 
