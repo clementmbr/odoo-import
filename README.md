@@ -1,31 +1,43 @@
 # Funcionamento básico
 
-Para importar dados no Odoo, basta clicar no botão _Import_ da página do tipo de objeto desejado.
+Para importar dados no Odoo, basta clicar no botão _Import_ da página do tipo de objeto desejado e selecionar o arquivo Excel com os dados desse tipo de objeto a ser importados.
 
 ![](.gitbook/assets/image%20%2829%29.png)
 
-A complexidade da importação de dados no Odoo vem da complexidade em registrar em Odoo **as relações** entre os objetos importados.
+Para saber como preencher esse arquivo Excel \(nome e conteúdo das colunas\), um método básico é de **primeiro exportar** um arquivo .xls de uma lista de objetos existentes com a opção '_Update data \(import-compatible export\)_' e a lista dos campos que você quer importar.
+
+## Exportar dados
+
+Para exportar dados do Odoo para arquivos Excel \(ou CSV\), é preciso fazer aparecer os objetos para ser exportados em visualização '**lista**'. Isso permite selecionar os objetos para serem exportados. Quando selecionar um objeto aparece o botão **Ação** que permite, entre outras coisas, exportar os dados dos objetos selecionados :
+
+![](.gitbook/assets/image%20%286%29.png)
+
+![](.gitbook/assets/image%20%281%29.png)
+
+Uma vez que você tiver exportado esse arquivo .xls, você pode **realizar uma cópia com os mesmos títulos de colunas** e formatar os dados para ser importados da mesma maneira que os itens exportados.
+
+Agora, a complexidade da importação de dados no Odoo vem da complexidade em registrar em Odoo **as relações** entre os objetos importados.
 
 ## Como importar relações entre objetos ?
 
-Um exemplo : um dos campos de um _Contato_ é o campo _Marcadores_ \(chamado também de "categoria de contato", ou "Tag do contato"\). Para associar cada contato importado com um Marcador específico teremos que :
+Vamos tomar um exemplo. Um dos campos dos objetos do tipo _Contato_ é o campo _Marcadores_ \(chamado também de "Categoria de contato", ou "Tag do contato"\). Para associar cada contato importado com um Marcador específico temos que :
 
 1.  Importar todos os _Marcadores_ **antes** de importar os _Contatos_.
-2. Durante a importação dos _Contatos_ teremos que indicar os _**External ID**_ dos _Marcadores_  de cada _Contato_ importado, para indicar qual _Marcador_ vai ser associado a qual _Contato_.
+2.  Na coluna dos _Marcadores_ do arquivo Excel de importação dos _Contatos_, indicar os _**External ID**_ dos _Marcadores_  de cada _Contato_ importado , para indicar qual _Marcador_  está associado a qual _Contato_.
 
 O _External ID_, chamado também de _**XML ID**_, é o identificador de um objeto presente em Odoo. Ele permite fazer a diferença por exemplo entre dois _Marcadores_ que teriam o mesmo nome no Odoo apesar de ser dois objetos distintos do mesmo tipo _'Marcador'_.
 
 {% hint style="info" %}
 É importante anotar a [diferença entre o External ID de um de um objeto e o ID no banco de dados](https://www.odoo.com/documentation/user/12.0/general/base_import/import_faq.html#what-s-the-difference-between-database-id-and-external-id) desse mesmo objeto.
 
-Os dois são um identificador único do mesmo objeto, porém o ID no banco de dados é um **número** \(único\) dado automaticamente por Odoo quando cria \(ou importa\) esse novo objeto, enquanto o External ID é uma **cadeia de caracteres** que pode ser dada pelo usuário durante a importação do objeto.
+Os dois são um identificador único do mesmo objeto, porém o _ID_ no banco de dados é um **número** \(único\) dado automaticamente por Odoo quando cria \(ou importa\) esse novo objeto, enquanto o _External ID_ é uma **cadeia de caracteres** que pode ser dada pelo usuário durante a importação do objeto.
 {% endhint %}
 
-É possível conhecer o External ID de um objeto diretamente pela **interface** do Odoo ou quando **exporta** dados Odoo para arquivos \(Excel ou CSV\).
+É possível conhecer o _External ID_ de um objeto diretamente pela **interface** do Odoo ou quando **exporta** dados Odoo para arquivos \(Excel ou CSV\).
 
 ## _External ID_ pela interface
 
-Primeiro precisa ativar o modo "desenvolvedor" do Odoo no painel de Configurações gerais :
+Primeiro precisa ativar o [modo "desenvolvedor" ](https://odoo-development.readthedocs.io/en/latest/odoo/usage/debug-mode.html)do Odoo no painel de Configurações gerais :
 
 ![](.gitbook/assets/image%20%2815%29.png)
 
@@ -33,15 +45,11 @@ Depois ir na página do objeto desejado, por exemplo esse Marcador de contato \(
 
 ![](.gitbook/assets/image.png)
 
-Aparece então as suas Metadatas, incluindo o **ID XML** \(outro nome para o External ID\), diferente  do ID 'simples' que é o identificador do objeto no banco de dados \(que não precisamos usar\) :
+Aparece então as suas Metadatas, incluindo o **ID XML** \(outro nome para o External ID\), diferente  do ID "simples" que é o identificador do objeto no banco de dados \(que não precisamos usar\) :
 
 ![](.gitbook/assets/image%20%2825%29.png)
 
-## _External ID_ na exportação
-
-Para exportar dados do Odoo para arquivos Excel \(ou CSV\), é preciso fazer aparecer os objetos para ser exportados em visualização '**lista**'. Isso permite selecionar os objetos para serem exportados. Quando selecionar um objeto aparece o botão **Ação** que permite, entre outras coisas, exportar os dados dos objetos selecionados :
-
-![](.gitbook/assets/image%20%286%29.png)
+## External ID na exportação
 
 Ao exportar _Marcadores_ de contato, para seguir o nosso exemplo, basta selecionar a opção '_Update data_' para fazer aparecer o campo '_ID Externo_' dentro dos campos disponíveis :
 
@@ -51,11 +59,15 @@ O resultado é um arquivo Excel com a lista dos _External ID_ de cada _Marcador_
 
 ![](.gitbook/assets/image%20%2817%29.png)
 
+{% hint style="warning" %}
+Apesar do título da coluna ser "id", é uma cadeia de caráteres, então é bem a coluna do nosso _**External ID**_. 
+{% endhint %}
+
 ## Criação do _External ID_ durante a importação
 
-A força desse _External ID_  é que ele pode ser dado a um objeto pelo usuário durante a importação.
+Um bom hábito para facilitar o processo de importação é de você **escolher/escrever os próprios External ID dos objetos que você está importando**. Desta maneira quando precisará importar outros tipos de objetos relacionados com os primeiros, você já conhecerá os External ID de referencias deles.
 
-Por exemplo, se eu importar o seguinte arquivo Excel :
+Por exemplo, se eu importar alguns _Marcadores_ com o seguinte arquivo Excel :
 
 ![](.gitbook/assets/image%20%2822%29.png)
 
@@ -67,7 +79,7 @@ Basta clicar no botão _Import_ &gt; _Carregar Arquivo_ da página '_Tags do Con
 Caso não preencher a coluna "_External ID_", Odoo criará-lo automaticamente e importará o objeto mesmo assim.
 {% endhint %}
 
-Podemos verificar pela interface que o _External ID_ de cada _Marcador_  importado corresponde à cadeia de caracteres indicada no arquivo de importação. Será então possível usar esse mesmo _External ID_ no futuro, por exemplo durante a importação dos Contatos para indicar o _Marcador_ de cada _Contato_ :
+Podemos finalmente verificar pela interface que o _External ID_ de cada _Marcador_  importado corresponde à cadeia de caracteres indicada no arquivo de importação. Será então possível usar esse mesmo _External ID_ no futuro, por exemplo durante a importação dos Contatos para indicar o _Marcador_ de cada _Contato_ :
 
 ![](.gitbook/assets/image%20%2827%29.png)
 
@@ -76,7 +88,7 @@ Podemos verificar pela interface que o _External ID_ de cada _Marcador_  importa
 Na mesma ideia que para importar a informação da relação entre dois objetos de tipos diferentes, o jeito mais simples e seguro de importar as relações entre dois objetos do mesmo tipo é de :
 
 1. importar os pais
-2. importar os filhos, indicando para cada filho o External ID do\(s\) pai\(s\) previamente importados
+2. importar os filhos, indicando para cada filho o _External ID_ do\(s\) pai\(s\) previamente importados
 
 Por exemplo, importando o arquivo :
 
@@ -93,7 +105,7 @@ Na teoria é possível importar junto no mesmo arquivo .xls ou .CSV os objetos f
 {% hint style="info" %}
 Alguns objetos Odoo podem ter **2 pais ou mais** \(o tipo de campo ligando um filho aos seus pais é então chamado de "_one2many_" ou "_many2many_"\), como os marcadores de Contato por exemplo.
 
-Nesta situação é só indicar os 2 \(ou mais\) External ID, separados por **um coma, sem espaço**. Exemplo :
+Nesta situação é só indicar os 2 \(ou mais\) External ID, separados por [**um coma, sem espaço**](https://www.odoo.com/documentation/user/12.0/general/base_import/import_faq.html#how-can-i-import-a-many2many-relationship-field-e-g-a-customer-that-has-multiple-tags). Exemplo :
 
 _marcador\_de\_contato\_1,marcardor\_de\_contato2_
 {% endhint %}

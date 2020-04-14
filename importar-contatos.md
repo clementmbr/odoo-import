@@ -6,15 +6,9 @@ O video oficial da Odoo S.A. é um bom primeiro passo caso estiver descobrindo a
 
 O único campo obrigatório para a criação de um Contato é o _Nome_, por isso é teoricamente possível importar um arquivo com apenas uma lista de nomes e criar facilmente centenas de Contatos.
 
-Porém, um _Contato_ em Odoo pode apontar para vários outros objetos Odoo. Por isso, como a gente indicou na introdução, é necessário [importar primeiramente todos esses objetos antes de finalmente importar os Contatos](./#como-importar-relacoes-entre-objetos) indicando o _External ID_ de cada objeto com qual cada _Contato_ estará relacionado.
+Porém, vários outros tipos de objetos Odoo apontam em direção a um objeto do tipo _Contato_. Por isso, como a gente indicou na introdução, é necessário [importar primeiramente todos esses objetos antes de finalmente importar os Contatos](./#como-importar-relacoes-entre-objetos) indicando o _External ID_ de cada objeto com qual cada _Contato_ estará relacionado.
 
 ## Importações anteriores aos Contatos
-
-O método básico para importar qualquer objeto em Odoo é de **primeiro exportar** um arquivo .xls de uma lista de objetos com a opção '_Update data \(import-compatible export\)_' e a lista dos campos que você quer importar :
-
-![](.gitbook/assets/image%20%281%29.png)
-
-Uma vez que você tiver exportado esse arquivo .xls, você pode preencher esse mesmo arquivo com os dados para ser importados, usando os mesmos títulos das colunas.
 
 Segue a lista exaustiva dos objetos Odoo a ser importados antes da importação de Contatos, indicando cada vez a onde encontrar esse objeto na interface de Odoo.
 
