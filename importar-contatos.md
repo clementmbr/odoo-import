@@ -6,23 +6,31 @@ O video oficial da Odoo S.A. é um bom primeiro passo caso estiver descobrindo a
 
 O único campo obrigatório para a criação de um Contato é o _Nome_, por isso é teoricamente possível importar um arquivo com apenas uma lista de nomes e criar facilmente centenas de Contatos.
 
-Porém, vários outros tipos de objetos Odoo apontam em direção a um objeto do tipo _Contato_. Por isso, como a gente indicou na introdução, é necessário [importar primeiramente todos esses objetos antes de finalmente importar os Contatos](./#como-importar-relacoes-entre-objetos) indicando o _External ID_ de cada objeto com qual cada _Contato_ estará relacionado.
+Porém, vários outros tipos de objetos Odoo apontam em direção a objetos do tipo _Contato_. Por isso, como a gente indicou na introdução, é necessário [importar primeiramente todos esses objetos antes de finalmente importar os Contatos](./#como-importar-relacoes-entre-objetos) indicando o _External ID_ de cada objeto com qual cada _Contato_ estará relacionado.
 
 ## Importações anteriores aos Contatos
 
 Segue a lista exaustiva dos objetos Odoo a ser importados antes da importação de Contatos, indicando cada vez a onde encontrar esse objeto na interface de Odoo.
 
+{% hint style="info" %}
+[Como a gente indicou na introdução](./#criacao-do-external-id-durante-a-importacao), não esquecer de escolher/escrever o _External ID_ de cada objeto importado para controlar e conhecer o nome desses _External ID_ antes de reutilizá-los no arquivo Excel de importação dos _Contatos_.
+{% endhint %}
+
 ### Bancos
+
+Menu _Contatos &gt; Configuração &gt; Bancos_ :
 
 ![](.gitbook/assets/image%20%282%29.png)
 
-Entendemos que um Contato vai estar ligado a um Banco e uma Conta Bancária vai estar ligada a ambos um Banco e um Contato. Por isso é preciso importar nesta ordem :
+Entendemos que um _Contato_ vai estar ligado a um _Banco_ e uma _Conta Bancária_ vai estar ligada a ambos um _Banco_ e um _Contato_. Por isso é preciso importar nesta ordem :
 
 1. Os Bancos
 2. Os Contatos
 3. As [Contas Bancárias](importar-contatos.md#contas-bancarias)
 
 ### Condições de Pagamento
+
+Menu _Faturamento &gt; Configuração &gt; Condições de Pagamento :_
 
 ![](.gitbook/assets/image%20%2828%29.png)
 
@@ -36,7 +44,7 @@ Uma _Posição Fiscal_ é uma tabela que faz a relação entre uma taxa e uma ou
 
 ### Lista de preços
 
-Uma "_Lista de preço_" é o nome de objeto Odoo enganosamente escolhido para diferenciar várias "categorias de clientes" e vender um produto a preços diferentes para cada categoria. Cf o nosso [tutorial sobre as _"Listas de preço"_](https://odoo-doc.gitbook.io/fonctionnel/-LxRKpKPmg6E8oIFl-4d/v/pt/vendas/lista-de-precos).
+Uma "_Lista de preço_" é o nome de objeto Odoo enganosamente escolhido para diferenciar vários "Grupos de clientes" e vender um produto a preços diferentes para cada grupo. Cf o nosso [tutorial sobre as _"Listas de preço"_](https://odoo-doc.gitbook.io/fonctionnel/-LxRKpKPmg6E8oIFl-4d/v/pt/vendas/lista-de-precos).
 
 É possível definir ou encontrar a lista dessas "_Lista de preços_" clicando embaixo da opção "_Múltiplos Preços de Venda por Produto_" nas _Configurações_ do aplicativo de Vendas :
 
@@ -44,9 +52,13 @@ Uma "_Lista de preço_" é o nome de objeto Odoo enganosamente escolhido para di
 
 ### Marcadores de Contato \(ou "Tags do Contato", ou "categoria de Contato"\)
 
-Seguindo as etapas que a gente viu [na introdução](./#criacao-do-external-id-durante-a-importacao).
+Seguir as etapas que a gente viu [na introdução](./#criacao-do-external-id-durante-a-importacao) para realizar a importação de _Marcadores_.
 
-### Tratamento para o contato
+### Tratamento para o contato \(ou "Título"\)
+
+Para indicar se um _Contato_ estará chamado de _Senhor_, _Senhora_ ou _Doutor_, é necessário preencher o campo "Título" do _Contato_, selecionando o _Título_ desejado dentro de uma lista de objetos Odoo existentes.
+
+Para importar esses objetos do tipo _Título_, ir no menu _Contatos &gt; Configuração &gt; Tratamento para o contato_.
 
 ![](.gitbook/assets/image%20%289%29.png)
 
