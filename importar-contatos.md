@@ -74,7 +74,7 @@ Esses campos de "Lançamentos Contábeis" aparecem na aba "Faturamento" dos Cont
 Esse lista se modifica na ficha do próprio usuário no menu _Configurações &gt; Utilizadores e Empresas &gt; Usuários_, com o [modo "desenvolvedor" ativado](https://odoo-development.readthedocs.io/en/latest/odoo/usage/debug-mode.html).
 {% endhint %}
 
-Geralmente as empresas usam as mesmas Contas de Recebimento e de Pagamento para todos os clientes e essas Contas estão dadas automaticamente para todos os novos clientes \(criados manualmente ou durante um importação\).
+Geralmente as empresas usam as mesmas Contas de Recebimento e de Pagamento para todos os clientes e essas Contas estão dadas automaticamente para todos os novos clientes \(criados manualmente ou durante uma importação\).
 
 Isso quer dizer que **você não precisa fazer nada** \(nem precisa mencionar as colunas desses campos no arquivo Excel de importação\) caso você quiser usar essas Contas padrões para os seus contatos. A única coisa é pensar em instalar o módulo Odoo correspondente ao Plano de Contas desejado **antes** de importar os Contatos. 
 
