@@ -20,7 +20,7 @@ Segue a lista exaustiva dos objetos Odoo a ser importados antes da importação 
 
 Menu _Contatos &gt; Configuração &gt; Bancos_ :
 
-![](.gitbook/assets/image%20%282%29.png)
+![](.gitbook/assets/image%20%283%29.png)
 
 Entendemos que um _Contato_ vai estar ligado a um _Banco_ e uma _Conta Bancária_ vai estar ligada a ambos um _Banco_ e um _Contato_. Por isso é preciso importar nesta ordem :
 
@@ -32,7 +32,7 @@ Entendemos que um _Contato_ vai estar ligado a um _Banco_ e uma _Conta Bancária
 
 Menu _Faturamento &gt; Configuração &gt; Condições de Pagamento :_
 
-![](.gitbook/assets/image%20%2828%29.png)
+![](.gitbook/assets/image%20%2830%29.png)
 
 ### Posições Fiscais
 
@@ -40,7 +40,7 @@ Uma _Posição Fiscal_ é uma tabela que faz a relação entre uma taxa e uma ou
 
 É possível definir ou encontrar a lista das _Posições fiscais_ no menu _Faturamento &gt; Configuração :_
 
-![](.gitbook/assets/image%20%2813%29.png)
+![](.gitbook/assets/image%20%2814%29.png)
 
 ### Lista de preços
 
@@ -48,7 +48,7 @@ Uma "_Lista de preço_" é o nome de objeto Odoo enganosamente escolhido para di
 
 É possível definir ou encontrar a lista dessas "_Lista de preços_" clicando embaixo da opção "_Múltiplos Preços de Venda por Produto_" nas _Configurações_ do aplicativo de Vendas :
 
-![](.gitbook/assets/image%20%2811%29.png)
+![](.gitbook/assets/image%20%2812%29.png)
 
 ### Marcadores de Contato \(ou "Tags do Contato", ou "categoria de Contato"\)
 
@@ -60,7 +60,29 @@ Para indicar se um _Contato_ estará chamado de _Senhor_, _Senhora_ ou _Doutor_,
 
 Para importar esses objetos do tipo _Título_, ir no menu _Contatos &gt; Configuração &gt; Tratamento para o contato_.
 
-![](.gitbook/assets/image%20%289%29.png)
+![](.gitbook/assets/image%20%2810%29.png)
+
+### Contas de Recebimento e de Pagamento
+
+Uma Conta de Recebimento \(respectivamente de Pagamento\) corresponde à **Conta do** _**Plano de Contas**_ da Contabilidade da sua empresa usada para registrar um recebimento \(resp. pagamento\) de dinheiro desse Contato :
+
+![](.gitbook/assets/image%20%282%29.png)
+
+{% hint style="info" %}
+Esses campos de "Lançamentos Contábeis" aparecem na aba "Faturamento" dos Contatos são visíveis apenas se a opção "**Mostrar Todas as Funcionalidades de Contabilidade**" for selecionada na lista dos direitos de acesso do seu usuário.
+
+Esse lista se modifica na ficha do próprio usuário no menu _Configurações &gt; Utilizadores e Empresas &gt; Usuários_, com o [modo "desenvolvedor" ativado](https://odoo-development.readthedocs.io/en/latest/odoo/usage/debug-mode.html).
+{% endhint %}
+
+Geralmente as empresas usam as mesmas Contas de Recebimento e de Pagamento para todos os clientes e essas Contas estão dadas automaticamente para todos os novos clientes \(criados manualmente ou durante um importação\).
+
+Isso quer dizer que **você não precisa fazer nada** \(nem precisa mencionar as colunas desses campos no arquivo Excel de importação\) caso você quiser usar essas Contas padrões para os seus contatos. A única coisa é pensar em instalar o módulo Odoo correspondente ao Plano de Contas desejado **antes** de importar os Contatos. 
+
+Por exemplo, para usar um Plano de Contas padrão para empresas do Simples Nacional, instalar o módulo da OCA [l10n\_br\_simple](https://github.com/OCA/l10n-brazil/tree/12.0/l10n_br_simple).
+
+Caso você quiser indicar uma Conta de Recebimento ou Pagamento especial para um Contato particular, é só preencher a coluna **property\_account\_receivable\_id/id** ou **property\_account\_payable\_id/id** do arquivo Excel de importação dos Contatos com o valor do _External ID_ da Conta desejada, encontrada no menu _Faturamento &gt; Configurações &gt; Plano de Contas_ :
+
+![](.gitbook/assets/image%20%2822%29.png)
 
 ## Importação dos contatos
 
@@ -224,18 +246,31 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
     <tr>
       <td style="text-align:left"><b>property_account_position_id/id</b>
       </td>
-      <td style="text-align:left"><em>External ID da &quot;</em><a href="importar-contatos.md#posicoes-fiscais"><em>Posi&#xE7;&#xE3;o Fiscal</em></a><em>&quot; </em>do
+      <td style="text-align:left"><em>External ID </em>da <em>&quot;</em><a href="importar-contatos.md#posicoes-fiscais"><em>Posi&#xE7;&#xE3;o Fiscal</em></a><em>&quot; </em>do
         Contato.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>property_account_receivable_id/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p><em>External ID </em>da &quot;<a href="importar-contatos.md#contas-de-recebimento-e-de-pagamento"><em>Conta de Recebimento</em></a>&quot;
+          do Contato.</p>
+        <p></p>
+        <p>Pensar em importar o <em>Plano de Contas</em>  <b>antes</b> da importa&#xE7;&#xE3;o
+          dos contatos e importar essa coluna apenas se n&#xE3;o usar a <em>Conta de Recebimento</em> padr&#xE3;o.</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>property_account_payable_id/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p><em>External ID </em>da &quot;<a href="https://app.gitbook.com/@odoo-doc/s/import-data-in-odoo/~/drafts/-M4tT1ghfGa51WXctEO8/v/pt/importar-contatos#contas-de-recebimento-e-de-pagamento"><em>Conta de Pagamento</em></a>&quot;
+          do Contato.</p>
+        <p></p>
+        <p>Da mesma maneira, pensar em importar o <em>Plano de Contas</em>  <b>antes</b> da
+          importa&#xE7;&#xE3;o dos contatos e importar essa coluna apenas se n&#xE3;o
+          usar a <em>Conta de Pagamento</em> padr&#xE3;o.</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>property_payment_term_id/id</b>
@@ -269,7 +304,7 @@ Todos os objetos que precisam estar ligados a um contato, como por exemplo as Co
 
 ### Contas Bancárias
 
-![](.gitbook/assets/image%20%285%29.png)
+![](.gitbook/assets/image%20%286%29.png)
 
 ### 
 
