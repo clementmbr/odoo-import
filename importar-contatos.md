@@ -16,31 +16,19 @@ Segue a lista exaustiva dos objetos Odoo a ser importados antes da importação 
 [Como a gente indicou na introdução](./#criacao-do-external-id-durante-a-importacao), não esquecer de escolher/escrever o _External ID_ de cada objeto importado para controlar e conhecer o nome desses _External ID_ antes de reutilizá-los no arquivo Excel de importação dos _Contatos_.
 {% endhint %}
 
-### Bancos
+### Tratamento para o contato \(ou "Título"\)
 
-Menu _Contatos &gt; Configuração &gt; Bancos_ :
+Para indicar se um _Contato_ estará chamado de _Senhor_, _Senhora_ ou _Doutor_, é necessário preencher o campo "Título" do _Contato_, selecionando o _Título_ desejado dentro de uma lista de objetos Odoo existentes.
 
-![](.gitbook/assets/image%20%283%29.png)
+Para importar esses objetos do tipo _Título_, ir no menu _Contatos &gt; Configuração &gt; Tratamento para o contato_.
 
-Entendemos que um _Contato_ vai estar ligado a um _Banco_ e uma _Conta Bancária_ vai estar ligada a ambos um _Banco_ e um _Contato_. Por isso é preciso importar nesta ordem :
+![](.gitbook/assets/image%20%2810%29.png)
 
-1. Os Bancos
-2. Os Contatos
-3. As [Contas Bancárias](importar-contatos.md#contas-bancarias)
+### Marcadores de Contato \(ou "Tags do Contato", ou "categoria de Contato"\)
 
-### Condições de Pagamento
+Seguir as etapas que a gente viu [na introdução](./#criacao-do-external-id-durante-a-importacao) para realizar a importação de _Marcadores_.
 
-Menu _Faturamento &gt; Configuração &gt; Condições de Pagamento :_
-
-![](.gitbook/assets/image%20%2831%29.png)
-
-### Posições Fiscais
-
-Uma _Posição Fiscal_ é uma tabela que faz a relação entre uma taxa e uma outra taxa. Cf o nosso [tutorial sobre as Posições Fiscais](https://odoo-doc.gitbook.io/fonctionnel/-LxRKpKPmg6E8oIFl-4d/v/pt/faturamento/posicoes-fiscais).
-
-É possível definir ou encontrar a lista das _Posições fiscais_ no menu _Faturamento &gt; Configuração :_
-
-![](.gitbook/assets/image%20%2814%29.png)
+![](.gitbook/assets/image%20%2810%29.png)
 
 ### Lista de preços
 
@@ -50,17 +38,13 @@ Uma "_Lista de preço_" é o nome de objeto Odoo enganosamente escolhido para di
 
 ![](.gitbook/assets/image%20%2812%29.png)
 
-### Marcadores de Contato \(ou "Tags do Contato", ou "categoria de Contato"\)
+### Posições Fiscais
 
-Seguir as etapas que a gente viu [na introdução](./#criacao-do-external-id-durante-a-importacao) para realizar a importação de _Marcadores_.
+Uma _Posição Fiscal_ é uma tabela que faz a relação entre uma taxa e uma outra taxa. Cf o nosso [tutorial sobre as Posições Fiscais](https://odoo-doc.gitbook.io/fonctionnel/-LxRKpKPmg6E8oIFl-4d/v/pt/faturamento/posicoes-fiscais).
 
-### Tratamento para o contato \(ou "Título"\)
+É possível definir ou encontrar a lista das _Posições fiscais_ no menu _Faturamento &gt; Configuração :_
 
-Para indicar se um _Contato_ estará chamado de _Senhor_, _Senhora_ ou _Doutor_, é necessário preencher o campo "Título" do _Contato_, selecionando o _Título_ desejado dentro de uma lista de objetos Odoo existentes.
-
-Para importar esses objetos do tipo _Título_, ir no menu _Contatos &gt; Configuração &gt; Tratamento para o contato_.
-
-![](.gitbook/assets/image%20%2810%29.png)
+![](.gitbook/assets/image%20%2814%29.png)
 
 ### Contas de Recebimento e de Pagamento
 
@@ -84,9 +68,31 @@ Caso você quiser indicar uma Conta de Recebimento ou Pagamento especial para um
 
 ![](.gitbook/assets/image%20%2823%29.png)
 
+### Condições de Pagamento
+
+Menu _Faturamento &gt; Configuração &gt; Condições de Pagamento :_
+
+![](.gitbook/assets/image%20%2831%29.png)
+
+### Modos e Métodos de pagamentos
+
+
+
+### Bancos
+
+Menu _Contatos &gt; Configuração &gt; Bancos_ :
+
+![](.gitbook/assets/image%20%283%29.png)
+
 ### Modos de Pagamento
 
+Entendemos que um _Contato_ vai estar ligado a um _Banco_ e uma _Conta Bancária_ vai estar ligada a ambos um _Banco_ e um _Contato_. Por isso é preciso importar nesta ordem :
+
 Um _Modo de Pagamento_ é um tipo de objeto Odoo adicionado às _Faturas_ pelo módulo OCA [account\_payment\_mode](https://github.com/OCA/bank-payment/tree/12.0/account_payment_mode) que **permite rastrear "como" são realizados os pagamentos** \(de um cliente ou para um fornecedor\).
+
+1. Os Bancos
+2. Os Contatos
+3. As [Contas Bancárias](importar-contatos.md#contas-bancarias)
 
 Junto com o módulo [account\_payment\_partner](https://github.com/OCA/bank-payment/tree/12.0/account_payment_partner) ele permite associar cada _Contato_ a um "Modo de Pagamento do Cliente" e/ou "Modo de Pagamento do Fornecedor", que permite preencher esse campo "Modo de Pagamento" das _Faturas_ associadas ao _Contato_ automaticamente, além de poder **realizar ações grupadas em todas as faturas com o mesmo** _**Modo de Pagamento.**_
 
@@ -177,7 +183,7 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
         <ul>
           <li>&quot;Contato&quot;</li>
           <li>&quot;Endere&#xE7;o de Cobran&#xE7;a&quot;</li>
-          <li>&quot;Endere&#xE7;o para envio:&quot; <em>(com os &quot;:&quot; no final)</em>
+          <li>&quot;Endere&#xE7;o para envio:&quot; <em>(com o &quot;:&quot; no final)</em>
           </li>
           <li>&quot;Endere&#xE7;o privado&quot;</li>
           <li>&quot;Outro endere&#xE7;o&quot;</li>
@@ -287,12 +293,14 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
     <tr>
       <td style="text-align:left"><b>property_payment_term_id/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><em>External ID </em>da &quot;<a href="importar-contatos.md#condicoes-de-pagamento"><em>Condi&#xE7;&#xE3;o de Pagamento</em></a>&quot;
+        do Contato se ele for &quot;<b>cliente</b>&quot;.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>property_supplier_payment_term_id/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">External ID da &quot;<a href="importar-contatos.md#condicoes-de-pagamento"><em>Condi&#xE7;&#xE3;o de Pagamento</em></a>&quot;
+        do Contato se ele for &quot;<b>fornecedor</b>&quot;.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>customer_payment_mode_id/id</b>
