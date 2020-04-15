@@ -74,16 +74,6 @@ Menu _Faturamento &gt; Configuração &gt; Condições de Pagamento :_
 
 ![](.gitbook/assets/image%20%2831%29.png)
 
-### Modos e Métodos de pagamentos
-
-
-
-### Bancos
-
-Menu _Contatos &gt; Configuração &gt; Bancos_ :
-
-![](.gitbook/assets/image%20%283%29.png)
-
 ### Modos de Pagamento
 
 Entendemos que um _Contato_ vai estar ligado a um _Banco_ e uma _Conta Bancária_ vai estar ligada a ambos um _Banco_ e um _Contato_. Por isso é preciso importar nesta ordem :
@@ -101,6 +91,12 @@ Cf o nosso tutorial sobre os [Modos de Pagamento](https://odoo-doc.gitbook.io/fo
 Para acessar ao External ID dos _Modos de Pagamento_ é necessário primeiro instalar os dois módulos [account\_payment\_mode](https://github.com/OCA/bank-payment/tree/12.0/account_payment_mode)  e [account\_payment\_partner](https://github.com/OCA/bank-payment/tree/12.0/account_payment_partner) e depois acessar ao menu _Faturamento &gt; Configuração &gt; Payment Modes_ :
 
 ![](.gitbook/assets/image%20%2817%29.png)
+
+### Bancos
+
+Menu _Contatos &gt; Configuração &gt; Bancos_ :
+
+![](.gitbook/assets/image%20%283%29.png)
 
 ## Importação dos contatos
 
