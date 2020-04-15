@@ -76,13 +76,7 @@ Menu _Faturamento &gt; Configuração &gt; Condições de Pagamento :_
 
 ### Modos de Pagamento
 
-Entendemos que um _Contato_ vai estar ligado a um _Banco_ e uma _Conta Bancária_ vai estar ligada a ambos um _Banco_ e um _Contato_. Por isso é preciso importar nesta ordem :
-
 Um _Modo de Pagamento_ é um tipo de objeto Odoo adicionado às _Faturas_ pelo módulo OCA [account\_payment\_mode](https://github.com/OCA/bank-payment/tree/12.0/account_payment_mode) que **permite rastrear "como" são realizados os pagamentos** \(de um cliente ou para um fornecedor\).
-
-1. Os Bancos
-2. Os Contatos
-3. As [Contas Bancárias](importar-contatos.md#contas-bancarias)
 
 Junto com o módulo [account\_payment\_partner](https://github.com/OCA/bank-payment/tree/12.0/account_payment_partner) ele permite associar cada _Contato_ a um "Modo de Pagamento do Cliente" e/ou "Modo de Pagamento do Fornecedor", que permite preencher esse campo "Modo de Pagamento" das _Faturas_ associadas ao _Contato_ automaticamente, além de poder **realizar ações grupadas em todas as faturas com o mesmo** _**Modo de Pagamento.**_
 
@@ -93,6 +87,12 @@ Para acessar ao External ID dos _Modos de Pagamento_ é necessário primeiro ins
 ![](.gitbook/assets/image%20%2818%29.png)
 
 ### Bancos
+
+Entendemos que um _Contato_ vai estar ligado a um _Banco_ e uma _Conta Bancária_ vai estar ligada a ambos um _Banco_ e um _Contato_. Por isso é preciso importar nesta ordem :
+
+1. Os Bancos
+2. Os Contatos
+3. As [Contas Bancárias](importar-contatos.md#contas-bancarias)
 
 Menu _Contatos &gt; Configuração &gt; Bancos_ :
 
