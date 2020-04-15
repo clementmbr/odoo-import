@@ -301,24 +301,35 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
     <tr>
       <td style="text-align:left"><b>customer_payment_mode_id/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><em>External ID </em>do &quot;<a href="importar-contatos.md#modos-de-pagamento"><em>Modo de pagamento</em></a>&quot;
+        do Contato se ele for &quot;<b>cliente</b>&quot;.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>supplier_payment_mode_id/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><em>External ID </em>do &quot;<a href="importar-contatos.md#modos-de-pagamento"><em>Modo de pagamento</em></a>&quot;
+        do Contato se ele for &quot;<b>fornecedor</b>&quot;.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>bank_ids/id</b>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p><em>External ID</em> do <a href="importar-contatos.md#bancos"><em>Banco</em></a> do
+          Contato.</p>
+        <p></p>
+        <p>Se ele tiver v&#xE1;rios <em>Bancos</em>, mencionar os <em>External IDs</em> de
+          cada <em>Banco</em>  <a href="https://www.odoo.com/documentation/user/12.0/general/base_import/import_faq.html#how-can-i-import-a-many2many-relationship-field-e-g-a-customer-that-has-multiple-tags">separado por um coma, sem espa&#xE7;o.</a>
+        </p>
+      </td>
     </tr>
   </tbody>
 </table>##  Importação posteriores aos contatos
 
-Todos os objetos que precisam estar ligados a um contato, como por exemplo as Contas Bancarias :
+É necessário importar **depois** dos _Contatos_ todos os objetos que precisam estar ligados a um _Contato_, como por exemplo as _Contas Bancárias_ :
 
 ### Contas Bancárias
+
+No menu _Contatos &gt; Configuração &gt; Contas Bancárias_ :
 
 ![](.gitbook/assets/image%20%286%29.png)
 
