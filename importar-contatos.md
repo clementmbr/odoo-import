@@ -32,7 +32,7 @@ Entendemos que um _Contato_ vai estar ligado a um _Banco_ e uma _Conta Bancária
 
 Menu _Faturamento &gt; Configuração &gt; Condições de Pagamento :_
 
-![](.gitbook/assets/image%20%2830%29.png)
+![](.gitbook/assets/image%20%2831%29.png)
 
 ### Posições Fiscais
 
@@ -82,7 +82,19 @@ Por exemplo, para usar um Plano de Contas padrão para empresas do Simples Nacio
 
 Caso você quiser indicar uma Conta de Recebimento ou Pagamento especial para um Contato particular, é só preencher a coluna **property\_account\_receivable\_id/id** ou **property\_account\_payable\_id/id** do arquivo Excel de importação dos Contatos com o valor do _External ID_ da Conta desejada, encontrada no menu _Faturamento &gt; Configurações &gt; Plano de Contas_ :
 
-![](.gitbook/assets/image%20%2822%29.png)
+![](.gitbook/assets/image%20%2823%29.png)
+
+### Modos de Pagamento
+
+Um _Modo de Pagamento_ é um tipo de objeto Odoo adicionado às _Faturas_ pelo módulo OCA [account\_payment\_mode](https://github.com/OCA/bank-payment/tree/12.0/account_payment_mode) que **permite rastrear "como" são realizados os pagamentos** \(de um cliente ou para um fornecedor\).
+
+Junto com o módulo [account\_payment\_partner](https://github.com/OCA/bank-payment/tree/12.0/account_payment_partner) ele permite associar cada _Contato_ a um "Modo de Pagamento do Cliente" e/ou "Modo de Pagamento do Fornecedor", que permite preencher esse campo "Modo de Pagamento" das _Faturas_ associadas ao _Contato_ automaticamente, além de poder **realizar ações grupadas em todas as faturas com o mesmo** _**Modo de Pagamento.**_
+
+Cf o nosso tutorial sobre os [Modos de Pagamento](https://odoo-doc.gitbook.io/fonctionnel/-LxRKpKPmg6E8oIFl-4d/v/pt/faturamento/modos-de-pagamento).
+
+Para acessar ao External ID dos _Modos de Pagamento_ é necessário primeiro instalar os dois módulos [account\_payment\_mode](https://github.com/OCA/bank-payment/tree/12.0/account_payment_mode)  e [account\_payment\_partner](https://github.com/OCA/bank-payment/tree/12.0/account_payment_partner) e depois acessar ao menu _Faturamento &gt; Configuração &gt; Payment Modes_ :
+
+![](.gitbook/assets/image%20%2817%29.png)
 
 ## Importação dos contatos
 

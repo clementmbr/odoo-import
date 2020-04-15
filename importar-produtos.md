@@ -10,7 +10,7 @@ O módulo [l10n\_br\_fiscal](https://github.com/akretion/l10n-brazil/tree/12.0-m
 
 Como qualquer outro objeto Odoo, o processo para importar produtos é de [primeiro **exportar** alguns produtos](importar-contatos.md#importacoes-anteriores-aos-contatos) atuais com a lista dos campos que você deseja importar, com a opção "_Update data \(import-compatible export\)_" e o formato Excel.
 
-![](.gitbook/assets/image%20%2832%29.png)
+![](.gitbook/assets/image%20%2833%29.png)
 
 ## Campos para importar
 
@@ -26,7 +26,7 @@ Como qualquer outro objeto Odoo, o processo para importar produtos é de [primei
 
 Nessa ideia, uma lista  mínima de campos para exportar e preparar o seu arquivo Excel para importação seria essa :
 
-![](.gitbook/assets/image%20%2826%29.png)
+![](.gitbook/assets/image%20%2827%29.png)
 
 Cuidando de [importar os _External ID_ dos objetos que jà existem](./#como-importar-relacoes-entre-objetos) no Odoo para realizar a conexão com o seu novo produto importado.
 
@@ -116,7 +116,7 @@ Cuidando de [importar os _External ID_ dos objetos que jà existem](./#como-impo
 
 É preciso primeiro definir essas Categorias e depois exportá-las com o seu External ID. Elas se encontram no menu _Fiscal &gt; Produtos e Serviços &gt; Categorias de Produtos_ :
 
-![](.gitbook/assets/image%20%2823%29.png)
+![](.gitbook/assets/image%20%2824%29.png)
 
 Ou no menu _Inventário &gt; Configurações &gt; Categorias de Produtos_.
 
