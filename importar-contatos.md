@@ -6,41 +6,41 @@ O video oficial da Odoo S.A. é um bom primeiro passo caso estiver descobrindo a
 
 O único campo obrigatório para a criação de um Contato é o _Nome_, por isso é teoricamente possível importar um arquivo com apenas uma lista de nomes e criar facilmente centenas de Contatos.
 
-Porém, vários outros tipos de objetos Odoo apontam em direção a objetos do tipo _Contato_. Por isso, como a gente indicou na introdução, é necessário [importar primeiramente todos esses objetos antes de finalmente importar os Contatos](./#como-importar-relacoes-entre-objetos) indicando o _External ID_ de cada objeto com qual cada _Contato_ estará relacionado.
+Porém, vários outros tipos de objetos Odoo apontam em direção a objetos do tipo _Contato_. Por isso, como indicado na introdução, é necessário [importar primeiramente todos esses objetos antes de finalmente importar os Contatos](./#como-importar-relacoes-entre-objetos) indicando o _External ID_ de cada objeto com qual cada _Contato_ estará relacionado.
 
 ## Importações anteriores aos Contatos
 
-Segue a lista exaustiva dos objetos Odoo a ser importados antes da importação de Contatos, indicando cada vez a onde encontrar esse objeto na interface de Odoo.
+Segue a lista exaustiva dos objetos Odoo a serem importados antes da importação dos Contatos, indicando cada vez a onde encontrar esse objeto na interface de Odoo.
 
 {% hint style="info" %}
-[Como a gente indicou na introdução](./#criacao-do-external-id-durante-a-importacao), não esquecer de escolher/escrever o _External ID_ de cada objeto importado para controlar e conhecer o nome desses _External ID_ antes de reutilizá-los no arquivo Excel de importação dos _Contatos_.
+[Como indicado na introdução](./#external-id-na-exportacao), não esquecer de escolher/escrever o _External ID_ de cada objeto importado para controlar e conhecer o nome desses _External ID_ antes de reutilizá-los no arquivo Excel de importação dos _Contatos_.
 {% endhint %}
 
 ### Tratamento para o contato \(ou "Título"\)
 
-Para indicar se um _Contato_ estará chamado de _Senhor_, _Senhora_ ou _Doutor_, é necessário preencher o campo "Título" do _Contato_, selecionando o _Título_ desejado dentro de uma lista de objetos Odoo existentes.
+Para indicar se um _Contato_ será chamado de _Senhor_, _Senhora_ ou _Doutor_, é necessário preencher o campo "Título" do _Contato_, selecionando o _Título_ desejado dentro de uma lista de objetos do Odoo existentes.
 
 Para importar esses objetos do tipo _Título_, ir no menu _Contatos &gt; Configuração &gt; Tratamento para o contato_.
 
 ![](.gitbook/assets/image%20%2810%29.png)
 
-### Marcadores de Contato \(ou "Tags do Contato", ou "categoria de Contato"\)
+### Marcadores de Contato \(ou "Tags do Contato", ou "Categoria de Contato"\)
 
-Seguir as etapas que a gente viu [na introdução](./#criacao-do-external-id-durante-a-importacao) para realizar a importação de _Marcadores_.
+Seguir as etapas que vimos [na introdução](./#criacao-do-external-id-durante-a-importacao) para realizar a importação de _Marcadores_.
 
 ![](.gitbook/assets/image%20%2810%29.png)
 
 ### Lista de preços
 
-Uma "_Lista de preço_" é o nome de objeto Odoo enganosamente escolhido para diferenciar vários "Grupos de clientes" e vender um produto a preços diferentes para cada grupo. Cf o nosso [tutorial sobre as _"Listas de preço"_](https://odoo-doc.gitbook.io/fonctionnel/-LxRKpKPmg6E8oIFl-4d/v/pt/vendas/lista-de-precos).
+Uma "_Lista de preço_" é o nome do objeto Odoo enganosamente escolhido para diferenciar vários "Grupos de clientes" e vender um produto a preços diferentes para cada grupo. Confira o nosso [tutorial sobre as _"Listas de preço"_](https://odoo-doc.gitbook.io/fonctionnel/-LxRKpKPmg6E8oIFl-4d/v/pt/vendas/lista-de-precos).
 
-É possível definir ou encontrar a lista dessas "_Lista de preços_" clicando embaixo da opção "_Múltiplos Preços de Venda por Produto_" nas _Configurações_ do aplicativo de Vendas :
+É possível definir ou encontrar a "_Lista de preços_" clicando embaixo da opção "_Múltiplos Preços de Venda por Produto_" nas _Configurações_ do aplicativo de Vendas :
 
 ![](.gitbook/assets/image%20%2812%29.png)
 
 ### Posições Fiscais
 
-Uma _Posição Fiscal_ é uma tabela que faz a relação entre uma taxa e uma outra taxa. Cf o nosso [tutorial sobre as Posições Fiscais](https://odoo-doc.gitbook.io/fonctionnel/-LxRKpKPmg6E8oIFl-4d/v/pt/faturamento/posicoes-fiscais).
+Uma _Posição Fiscal_ é uma tabela que faz a relação entre uma taxa e uma outra taxa. Veja o nosso [tutorial sobre as Posições Fiscais](https://odoo-doc.gitbook.io/fonctionnel/-LxRKpKPmg6E8oIFl-4d/v/pt/faturamento/posicoes-fiscais).
 
 É possível definir ou encontrar a lista das _Posições fiscais_ no menu _Faturamento &gt; Configuração :_
 
@@ -53,9 +53,9 @@ Uma Conta de Recebimento \(respectivamente de Pagamento\) corresponde à **Conta
 ![](.gitbook/assets/image%20%282%29.png)
 
 {% hint style="info" %}
-Esses campos de "Lançamentos Contábeis" aparecem na aba "Faturamento" dos Contatos são visíveis apenas se a opção "**Mostrar Todas as Funcionalidades de Contabilidade**" for selecionada na lista dos direitos de acesso do seu usuário.
+Esses campos de "Lançamentos Contábeis" aparecem na aba "Faturamento" dos Contatos são visíveis apenas se a opção "**Mostrar Todas as Funcionalidades de Contabilidade**" for selecionada na lista das permissões de acesso do seu usuário.
 
-Esse lista se modifica na ficha do próprio usuário no menu _Configurações &gt; Utilizadores e Empresas &gt; Usuários_, com o [modo "desenvolvedor" ativado](https://odoo-development.readthedocs.io/en/latest/odoo/usage/debug-mode.html).
+Essa lista se modifica no cadastro do próprio usuário no menu _Configurações &gt; Utilizadores e Empresas &gt; Usuários_, com o [modo "desenvolvedor" ativado](https://odoo-development.readthedocs.io/en/latest/odoo/usage/debug-mode.html).
 {% endhint %}
 
 Geralmente as empresas usam as mesmas Contas de Recebimento e de Pagamento para todos os clientes e essas Contas estão dadas automaticamente para todos os novos clientes \(criados manualmente ou durante uma importação\).
@@ -64,7 +64,7 @@ Isso quer dizer que **você não precisa fazer nada** \(nem precisa mencionar as
 
 Por exemplo, para usar um Plano de Contas padrão para empresas do Simples Nacional, instalar o módulo da OCA [l10n\_br\_simple](https://github.com/OCA/l10n-brazil/tree/12.0/l10n_br_simple).
 
-Caso você quiser indicar uma Conta de Recebimento ou Pagamento especial para um Contato particular, é só preencher a coluna **property\_account\_receivable\_id/id** ou **property\_account\_payable\_id/id** do arquivo Excel de importação dos Contatos com o valor do _External ID_ da Conta desejada, encontrada no menu _Faturamento &gt; Configurações &gt; Plano de Contas_ :
+Caso você queira indicar uma Conta de Recebimento ou Pagamento especial para um Contato particular, é só preencher a coluna **property\_account\_receivable\_id/id** ou **property\_account\_payable\_id/id** do arquivo Excel de importação dos Contatos com o valor do _External ID_ da Conta desejada, encontrada no menu _Faturamento &gt; Configurações &gt; Plano de Contas_ :
 
 ![](.gitbook/assets/image%20%2824%29.png)
 
@@ -76,11 +76,11 @@ Menu _Faturamento &gt; Configuração &gt; Condições de Pagamento :_
 
 ### Modos de Pagamento
 
-Um _Modo de Pagamento_ é um tipo de objeto Odoo adicionado às _Faturas_ pelo módulo OCA [account\_payment\_mode](https://github.com/OCA/bank-payment/tree/12.0/account_payment_mode) que **permite rastrear "como" são realizados os pagamentos** \(de um cliente ou para um fornecedor\).
+Um _Modo de Pagamento_ é um tipo de objeto Odoo adicionado às _Faturas_ pelo módulo OCA [account\_payment\_mode](https://github.com/OCA/bank-payment/tree/12.0/account_payment_mode) que **permite informar "como" são realizados os pagamentos** \(de um cliente ou para um fornecedor\).
 
 Junto com o módulo [account\_payment\_partner](https://github.com/OCA/bank-payment/tree/12.0/account_payment_partner) ele permite associar cada _Contato_ a um "Modo de Pagamento do Cliente" e/ou "Modo de Pagamento do Fornecedor", que permite preencher esse campo "Modo de Pagamento" das _Faturas_ associadas ao _Contato_ automaticamente, além de poder **realizar ações grupadas em todas as faturas com o mesmo** _**Modo de Pagamento.**_
 
-Cf o nosso tutorial sobre os [Modos de Pagamento](https://odoo-doc.gitbook.io/fonctionnel/-LxRKpKPmg6E8oIFl-4d/v/pt/faturamento/modos-de-pagamento).
+Confira o nosso tutorial sobre os [Modos de Pagamento](https://odoo-doc.gitbook.io/fonctionnel/-LxRKpKPmg6E8oIFl-4d/v/pt/faturamento/modos-de-pagamento).
 
 Para acessar ao External ID dos _Modos de Pagamento_ é necessário primeiro instalar os dois módulos [account\_payment\_mode](https://github.com/OCA/bank-payment/tree/12.0/account_payment_mode)  e [account\_payment\_partner](https://github.com/OCA/bank-payment/tree/12.0/account_payment_partner) e depois acessar ao menu _Faturamento &gt; Configuração &gt; Payment Modes_ :
 
@@ -100,12 +100,12 @@ Menu _Contatos &gt; Configuração &gt; Bancos_ :
 
 ## Importação dos contatos
 
-[Como explicamos na introdução](./#relacao-pai-filho), é importante realizar em primeiro a importação dos Contatos "pai" \(como uma empresa\) e depois os Contatos "filho" \(como os membros de uma empresa\) ligados aos Contatos "pai" pelo External ID desses.
+[Como explicamos na introdução](./#relacao-pai-filho), é importante realizar primeiro a importação dos Contatos "pai" \(como uma empresa\) e depois os Contatos "filho" \(como os membros de uma empresa\) ligados aos Contatos "pai" pelo External ID desses.
 
 {% hint style="info" %}
 A relação pai/filho mais frequente nos objetos 'Contatos' é entre uma empresa 'pai' e um empregado 'filho'. Mas é bom anotar que os endereços \(como o endereço para envio ou o endereço de cobrança\) são também registrados como objetos '_Contato_' no banco de dado do Odoo.
 
-Então para importar endereços específicos de um contato é preciso **primeiro importar o contato 'pai' e depois importar o endereço 'filho'** desse contato \(cf o campo "type" do arquivo Excel de importação\)
+Então para importar endereços específicos de um contato é preciso **primeiro importar o contato 'pai' e depois importar o endereço 'filho'** desse contato \(veja o campo "type" do arquivo Excel de importação\)
 {% endhint %}
 
 Segue uma lista dos campos interessantes para uma importação de Contatos com todas as relações possíveis com os outros objetos Odoo :
@@ -127,7 +127,7 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
         <p></p>
         <p>&#xC9; importante preencher manualmente esse campo para os contatos &apos;pai&apos;.
           O <em>External ID</em> definido nesse momento ser&#xE1; usado num segundo
-          tempo durante a importa&#xE7;&#xE3;o dos contatos &apos;filhos&apos;.</p>
+          momento durante a importa&#xE7;&#xE3;o dos contatos &apos;filhos&apos;.</p>
       </td>
     </tr>
     <tr>
@@ -318,8 +318,7 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
           Contato.</p>
         <p></p>
         <p>Se ele tiver v&#xE1;rios <em>Bancos</em>, mencionar os <em>External IDs</em> de
-          cada <em>Banco</em>  <a href="https://www.odoo.com/documentation/user/12.0/general/base_import/import_faq.html#how-can-i-import-a-many2many-relationship-field-e-g-a-customer-that-has-multiple-tags">separado por um coma, sem espa&#xE7;o.</a>
-        </p>
+          cada <em>Banco</em> separado por uma v&#xED;rgula, sem espa&#xE7;o.</p>
       </td>
     </tr>
   </tbody>
