@@ -113,13 +113,13 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">T&#xED;tulo da coluna do arquivo .xls</th>
+      <th style="text-align:right">T&#xED;tulo da coluna do arquivo .xls</th>
       <th style="text-align:left">Conte&#xFA;do</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>id</b>
+      <td style="text-align:right"><b>id</b>
       </td>
       <td style="text-align:left">
         <p><em>External ID</em> dado ao contato importado.</p>
@@ -131,48 +131,48 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>name</b>
+      <td style="text-align:right"><b>name</b>
       </td>
       <td style="text-align:left">Nome usual do Contato</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>legal_name</b>
+      <td style="text-align:right"><b>legal_name</b>
       </td>
       <td style="text-align:left">Raz&#xE3;o Social do Contato se for uma empresa, Nome completo do Contato
         se for uma pessoa f&#xED;sica</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>title/id</b>
+      <td style="text-align:right"><b>title/id</b>
       </td>
       <td style="text-align:left"><em>External ID</em> do <a href="importar-contatos.md#tratamento-para-o-contato">tratamento do contato</a> (T&#xED;tulo
         do contato)</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>is_company</b>
+      <td style="text-align:right"><b>is_company</b>
       </td>
       <td style="text-align:left">Campo Booleano : &apos;1&apos; se for uma empresa, &apos;0&apos; se n&#xE3;o
         for</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>customer</b>
+      <td style="text-align:right"><b>customer</b>
       </td>
       <td style="text-align:left">Campo Booleano : &apos;1&apos; se for um cliente, &apos;0&apos; se n&#xE3;o
         for</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>supplier</b>
+      <td style="text-align:right"><b>supplier</b>
       </td>
       <td style="text-align:left">Campo Booleano : &apos;1&apos; se for um fornecedor, &apos;0&apos; se
         n&#xE3;o for</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>active</b>
+      <td style="text-align:right"><b>active</b>
       </td>
       <td style="text-align:left">Campo Booleano : &apos;1&apos; se for um contato ativo, &apos;0&apos;
         se n&#xE3;o for</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>type</b>
+      <td style="text-align:right"><b>type</b>
       </td>
       <td style="text-align:left">
         <p>Escolher entre :</p>
@@ -193,12 +193,12 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>parent_id/id</b>
+      <td style="text-align:right"><b>parent_id/id</b>
       </td>
       <td style="text-align:left"><em>External ID</em> do contato &apos;pai&apos; do contato importado</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>country_id/id</b>
+      <td style="text-align:right"><b>country_id/id</b>
       </td>
       <td style="text-align:left">
         <p><em>External ID</em> do pa&#xED;s do contato. Por exemplo &quot;<b>base.br</b>&quot;
@@ -211,7 +211,7 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>state_id/id</b>
+      <td style="text-align:right"><b>state_id/id</b>
       </td>
       <td style="text-align:left">
         <p><em>External ID</em> do estado do contato. Por exemplo &quot;<b>base.state_br_rj</b>&quot;
@@ -225,7 +225,7 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>lang</b>
+      <td style="text-align:right"><b>lang</b>
       </td>
       <td style="text-align:left">
         <p><em>C&#xF3;digo de Pa&#xED;s/L&#xED;ngua </em>do idioma do contato. &quot;<b>pt_BR</b>&quot;
@@ -244,7 +244,7 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>category_id/id</b>
+      <td style="text-align:right"><b>category_id/id</b>
       </td>
       <td style="text-align:left"><em>External ID </em>dos <a href="importar-contatos.md#marcadores-de-contato-ou-tags-do-contato-ou-categoria-de-contato">Marcadores do Contato</a>.
         <br
@@ -252,19 +252,19 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
         <br />Para dar v&#xE1;rios Marcadores ao mesmo contato, <a href="https://www.odoo.com/documentation/user/12.0/general/base_import/import_faq.html#how-can-i-import-a-many2many-relationship-field-e-g-a-customer-that-has-multiple-tags">informar todos os <em>External ID</em> desejados separados por uma coma &quot;,&quot; sem espa&#xE7;o</a>.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>property_product_pricelist/id</b>
+      <td style="text-align:right"><b>property_product_pricelist/id</b>
       </td>
       <td style="text-align:left"><em>External ID </em>da &quot;<a href="importar-contatos.md#lista-de-precos"><em>Lista de pre&#xE7;o</em></a>&quot;
         do Contato.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>property_account_position_id/id</b>
+      <td style="text-align:right"><b>property_account_position_id/id</b>
       </td>
       <td style="text-align:left"><em>External ID </em>da <em>&quot;</em><a href="importar-contatos.md#posicoes-fiscais"><em>Posi&#xE7;&#xE3;o Fiscal</em></a><em>&quot; </em>do
         Contato.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>property_account_receivable_id/id</b>
+      <td style="text-align:right"><b>property_account_receivable_id/id</b>
       </td>
       <td style="text-align:left">
         <p><em>External ID </em>da &quot;<a href="importar-contatos.md#contas-de-recebimento-e-de-pagamento"><em>Conta de Recebimento</em></a>&quot;
@@ -275,7 +275,7 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>property_account_payable_id/id</b>
+      <td style="text-align:right"><b>property_account_payable_id/id</b>
       </td>
       <td style="text-align:left">
         <p><em>External ID </em>da &quot;<a href="https://app.gitbook.com/@odoo-doc/s/import-data-in-odoo/~/drafts/-M4tT1ghfGa51WXctEO8/v/pt/importar-contatos#contas-de-recebimento-e-de-pagamento"><em>Conta de Pagamento</em></a>&quot;
@@ -287,31 +287,31 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>property_payment_term_id/id</b>
+      <td style="text-align:right"><b>property_payment_term_id/id</b>
       </td>
       <td style="text-align:left"><em>External ID </em>da &quot;<a href="importar-contatos.md#condicoes-de-pagamento"><em>Condi&#xE7;&#xE3;o de Pagamento</em></a>&quot;
         do Contato se ele for &quot;<b>cliente</b>&quot;.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>property_supplier_payment_term_id/id</b>
+      <td style="text-align:right"><b>property_supplier_payment_term_id/id</b>
       </td>
       <td style="text-align:left">External ID da &quot;<a href="importar-contatos.md#condicoes-de-pagamento"><em>Condi&#xE7;&#xE3;o de Pagamento</em></a>&quot;
         do Contato se ele for &quot;<b>fornecedor</b>&quot;.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>customer_payment_mode_id/id</b>
+      <td style="text-align:right"><b>customer_payment_mode_id/id</b>
       </td>
       <td style="text-align:left"><em>External ID </em>do &quot;<a href="importar-contatos.md#modos-de-pagamento"><em>Modo de pagamento</em></a>&quot;
         do Contato se ele for &quot;<b>cliente</b>&quot;.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>supplier_payment_mode_id/id</b>
+      <td style="text-align:right"><b>supplier_payment_mode_id/id</b>
       </td>
       <td style="text-align:left"><em>External ID </em>do &quot;<a href="importar-contatos.md#modos-de-pagamento"><em>Modo de pagamento</em></a>&quot;
         do Contato se ele for &quot;<b>fornecedor</b>&quot;.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>bank_ids/id</b>
+      <td style="text-align:right"><b>bank_ids/id</b>
       </td>
       <td style="text-align:left">
         <p><em>External ID</em> do <a href="importar-contatos.md#bancos"><em>Banco</em></a> do
