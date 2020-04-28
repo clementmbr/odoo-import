@@ -15,7 +15,7 @@ Como qualquer outro objeto Odoo, o processo para importar um projeto é de [prim
 
 ![](.gitbook/assets/image%20%2822%29.png)
 
-Entendemos que **um** _**Projeto**_ **é composto de** _**Tarefas**_, por isso, como para qualquer importação de objetos Odoo relacionados com outros, é importante importar primeiro os _Projetos_ e num segundo tempo as _Tarefas_, [cada _Tarefa_ sendo relacionada ao seu _Projeto_ pelo _External ID_ do _Projeto_](./#como-importar-relacoes-entre-objetos).
+Entendemos que **um** _**Projeto**_ **é composto de** _**Tarefas**_, por isso, como para qualquer importação de objetos Odoo relacionados com outros, é importante importar primeiro os _Projetos_ e em um segundo momento as _Tarefas_, [cada _Tarefa_ sendo relacionada ao seu _Projeto_ pelo _External ID_ do _Projeto_](./#como-importar-relacoes-entre-objetos).
 
 Uma lista de campos interessantes para importar pode ser :
 
@@ -34,8 +34,9 @@ Uma lista de campos interessantes para importar pode ser :
         <p><em>External ID</em> dado ao <em>Projeto</em> importado.</p>
         <p>Se deixar vazio o Odoo criar&#xE1; um automaticamente.</p>
         <p></p>
-        <p>&#xC9; importante preencher manualmente esse campo para controlar e conhecer
-          o valor desse <em>External ID</em>. Ele ser&#xE1; <a href="./#como-importar-relacoes-entre-objetos">usado num segundo tempo durante a importa&#xE7;&#xE3;o das <em>Tarefas</em></a>.</p>
+        <p>&#xC9; importante preencher manualmente esse campo para controlar e saber
+          o valor desse <em>External ID</em>. Ele ser&#xE1; usado <a href="./#como-importar-relacoes-entre-objetos">em um segundo momento durante a importa&#xE7;&#xE3;o das <em>Tarefas</em>.</a>
+        </p>
       </td>
     </tr>
     <tr>
@@ -90,9 +91,9 @@ Uma lista de campos interessantes para importar pode ser :
   </tbody>
 </table>### Sobre as Contas Analíticas
 
-Odoo cria uma _Conta Analítica_ com o mesmo nome que o _Projeto_ **automaticamente** cada vez que você criar um _Projeto_ manualmente ou quand você importa um _Projeto_ sem preencher a coluna "_analytic\_account\_id/id_".
+O Odoo cria uma _Conta Analítica_ com o mesmo nome que o _Projeto_ **automaticamente** cada vez que você criar um _Projeto_ manualmente ou quando você importa um _Projeto_ sem preencher a coluna "_analytic\_account\_id/id_".
 
-Então você precisa criar uma _Conta Analítica_ previamente e informar o valor do _External ID_ dessa conta no arquivo de importação de projeto **apenas** se você quiser relacionar dois projetos \(ou mais\) com a mesma _Conta Analítica_.
+Então você precisa criar uma _Conta Analítica_ previamente e informar o valor do _External ID_ dessa conta no arquivo de importação do projeto **apenas** se você quiser relacionar dois projetos \(ou mais\) com a mesma _Conta Analítica_.
 
 Se o menu _Contas Analíticas_ não aparecer no menu _Faturamento_ &gt; _Configuração_, pensar em ativar a configuração "_Contabilidade Analíticas_" do seu usuário, acessando pelo menu _Configurações_ &gt; _Utilizadores e Empresas_ &gt; _Usuários_, sem esquecer de [ativar o modo desenvolvedor](./#external-id-pela-interface) para todos os campos aparecerem.
 
@@ -168,7 +169,7 @@ Segue uma lista de campos para importar _Tarefas_ de _Projetos_ :
     </tr>
   </tbody>
 </table>{% hint style="info" %}
-Caso importar uma _Tarefa_ com um _Estágio_ que existe no Odoo mas que não é presente no _Projeto_ específico da _Tarefa_, indicar o _External ID_ do _Estágio_ da mesma maneira e o _Estágio_ aparecerá daqui em diante nesse _Projeto_.
+Caso se queira importar uma _Tarefa_ com um _Estágio_ que existe no Odoo mas que não é presente no _Projeto_ específico da _Tarefa_, indicar o _External ID_ do _Estágio_ da mesma maneira e o _Estágio_ aparecerá daqui em diante nesse _Projeto_.
 {% endhint %}
 
 
