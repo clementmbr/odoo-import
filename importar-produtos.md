@@ -4,7 +4,7 @@ description: ...com o módulo `l10n_br_fiscal` da Akretion instalado
 
 # Importar produtos
 
-O módulo [l10n\_br\_fiscal](https://github.com/akretion/l10n-brazil/tree/12.0-mig-l10n_br_account_product/l10n_br_fiscal) desenvolvido pela [Akretion](https://akretion.com/pt-BR) permite ter no Odoo **a integralidade dos categorias fiscais necessárias** ao cadastramento oficial de qualquer tipo de produto, incluindo o NCM, NBS, NBM, CEST e outros :
+O módulo [l10n\_br\_fiscal](https://github.com/akretion/l10n-brazil/tree/12.0-mig-l10n_br_account_product/l10n_br_fiscal) desenvolvido pela [Akretion](https://akretion.com/pt-BR) permite ter no Odoo **a integralidade das informações fiscais necessárias** ao cadastramento oficial de qualquer tipo de produto, incluindo o NCM, NBS, NBM, CEST e outros :
 
 ![](.gitbook/assets/image%20%2811%29.png)
 
@@ -14,7 +14,7 @@ Como qualquer outro objeto Odoo, o processo para importar produtos é de [primei
 
 ## Campos para importar
 
-É possível importar a lista de campos que você precisar, porém alguns campos são obrigatórios e devem ser importados como :
+É possível importar apenas a lista de campos que você precisa, porém alguns campos são obrigatórios e devem ser informados como :
 
 * o Nome
 * o Tipo
@@ -28,7 +28,7 @@ Nessa ideia, uma lista  mínima de campos para exportar e preparar o seu arquivo
 
 ![](.gitbook/assets/image%20%2828%29.png)
 
-Cuidando de [importar os _External ID_ dos objetos que jà existem](./#como-importar-relacoes-entre-objetos) no Odoo para realizar a conexão com o seu novo produto importado.
+Observando a questão de [importar os _External ID_ dos objetos que jà existem](./#como-importar-relacoes-entre-objetos) no Odoo para realizar a conexão com o seu novo produto importado.
 
 <table>
   <thead>
@@ -69,8 +69,8 @@ Cuidando de [importar os _External ID_ dos objetos que jà existem](./#como-impo
       <td style="text-align:left"><b>categ_id/id</b>
       </td>
       <td style="text-align:left"><em>External ID </em>da <a href="importar-produtos.md#categoria-de-produto"><em>Categoria de Produto</em></a>,
-        um tipo de objeto Odoo qui permite tratar juntos os <em>Produtos</em> da
-        mesma categoria (como para necessidades cont&#xE1;veis por exemplo)</td>
+        um tipo de objeto Odoo que permite tratar juntos os <em>Produtos</em> da
+        mesma categoria (como para necessidades cont&#xE1;beis por exemplo)</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>fiscal_type</b>
@@ -140,12 +140,12 @@ Escolher o número seguindo o Tipo Fiscal desejado :
 | 99 | Outras |
 
 {% hint style="info" %}
-Esses _Tipos Fiscais_ são constantes no Odoo, **não é possível modificá-los**.
+Esses _Tipos Fiscais_ são fixos no Odoo, **não é possível modificá-los**.
 {% endhint %}
 
 ## Origem do ICMS
 
-Escolher o número seguindo o Origem do ICMS desejado :
+Escolher o número seguindo a Origem do ICMS desejado :
 
 | Número | Origem do ICMS |
 | :--- | :--- |
@@ -160,7 +160,7 @@ Escolher o número seguindo o Origem do ICMS desejado :
 | 8 | 8 – Nacional – mercadoria ou bem com Conteúdo de Importação superior a 70% \(setenta por cento\). \(cf. Ajuste SINIEF 15/2013\) |
 
 {% hint style="info" %}
-essas _Origens de ICMS_ são constantes no Odoo, **não é possível modificá-las**.
+Essas _Origens de ICMS_ são fixas no Odoo, **não é possível modificá-las**.
 {% endhint %}
 
 
