@@ -17,7 +17,7 @@ Como qualquer outro objeto Odoo, o processo para importar produtos é de [primei
 Existe **dois tipos de objetos Odoo** distintos para a gestão dos produtos, registrados em duas tabelas distintas no banco de dados : 
 
 * **product.product** para as variantes de um mesmo produto \(criados pelo menu _Variantes de Produto_\)
-* e **product.template** para os diferentes produtos que podem ter cada um várias variantes \(criados pelo menu _Produtos_\) :
+* **product.template** para os diferentes produtos que podem ter cada um várias variantes \(criados pelo menu _Produtos_\) :
 
 ![](.gitbook/assets/image%20%2819%29.png)
 
@@ -27,17 +27,27 @@ Por padrão esse menu das _Variantes de Produto_ não aparece no Odoo, tem que s
 
 Porém, mesmo quando essa opção não for selecionada e o menu não aparecer, **os dois tipos de objetos coexistem** : quando criar um objeto _product.template_ pelo menu _Produtos_ clássico, um objeto _product.product_ será **automaticamente criado** e ligado a esse _product.template_, sendo a "única variante" dele.
 
-E vice e versa, quando uma variante _product.product_ é criada de zero pelo menu _Variantes de Produto_, o seu produto _product.template_ relacionado é **criado automaticamente**, sendo um _product.template_ com uma única variante.
+E vice e versa, quando uma variante _product.product_ é criada de zero pelo menu _Variantes de Produto_, o seu produto _product.template_ relacionado é criado automaticamente, sendo um _product.template_ com uma única variante.
 
-Por isso, é muito importante entender que quando você importar produtos pelo botão "Importar" do menu _Produtos_, você vai criar objetos do tipo _product.template_ \(e os objetos _product.product_ relacionados serão criados automaticamente\) enquanto quando importar produtos pelo botão "Importar" do menu _Variantes de Produtos_, você vai criar objetos do tipo _product.product_ \(e objetos _product.template_ serão criados automaticamente\).
+Por isso, é muito importante entender que quando você importar produtos pelo **botão "Importar" do menu** _**Produtos**_, você vai criar objetos do tipo ****_**product.template**_ \(e os objetos _product.product_ relacionados serão criados automaticamente\) enquanto quando importar produtos pelo **botão "Importar" do menu** _**Variantes de Produtos**_, você vai criar objetos do tipo _**product.product**_ \(e objetos _product.template_ serão criados automaticamente\).
 
 {% hint style="warning" %}
-Se quiser importar uma lista de novos produtos e as suas quantidades no inventário, você precisa primeiro importar a lista de produtos e depois importar um **Ajuste de Estoque**.
+Se quiser importar uma lista de novos produtos junto com as suas quantidades no inventário, você precisa primeiro importar a lista de produtos e depois importar um **Ajuste de Estoque**.
 
 No arquivo excel do _Ajuste de Estoque_ importado, você deve **indicar o** _**External ID**_ **do objeto** _**product.product**_ **do produto**, além da sua quantidade e da sua locação no inventário.
 
 Por isso **recomendamos importar a lista dos novos produtos pelo menu** _**Variantes de Produto**_, mesmo se você não usar essa gestão dos variantes depois. No arquivo excel dessa importação você vai indicar os _External IDs_ desses novos objetos _product.product_... o que vai permitir você citar esses mesmos _External IDs_ na importação do _Ajuste de Estoque_ na seguida.
 {% endhint %}
+
+Apesar de adicionar um certa complexidade, essa gestão dos produtos com esses dois tipos de objetos é muito bem elaborada no Odoo.
+
+Os campos comuns aos _product.template_ e _product.product_ são **sincronizados** \(e.g. se modificar o nome de um _product.product_ o nome do seu _product.template_ relacionado vai ser modificado automaticamente, e vice e versa\).
+
+Ao contrário, os campos do tipo "**atributo**" de um _product.product_ **não vão estar ligados** com campos do seu objeto _product.template_ correspondente porque eles vão "caracterizar" essa variante \(e. g. o campo "cor" de um objeto "mesa", ou o campo "tamanho" de um objeto "camisa"\).
+
+Graça a essa sincronização dos campos comuns, os nomes das colunas do arquivo excel de importação \(i.e. os "campos" desses produtos importados\) vão ser **as mesmas** se usar esse arquivo para importar objetos _product.product_ ou _product.template_.
+
+A única coisa é de cuidar de **não realizar a importação em duplo !** Se importar objetos _product.product_, os objetos _product.template_ relacionados vão ser criados automaticamente. Isso quer dizer que você vai escolher e conhecer os _External IDs_ desses _product.product_ importados, porém você não vai conhecer facilmente os _External IDs_ desses _product.template_ criados automaticamente. __
 
 ## Campos para importar
 
