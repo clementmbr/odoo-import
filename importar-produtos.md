@@ -151,6 +151,12 @@ Observando a questão de [importar os _External ID_ dos objetos que jà existem]
   </tbody>
 </table>
 
+Um exemplo de arquivo excel de importação de produtos pode ser baixado aqui :
+
+{% embed url="https://drive.google.com/file/d/1m7SbjiW-sgme3Jj4CuXtKquEj2iiQKhC/view?usp=sharing" %}
+
+
+
 ## Categoria de Produto
 
 É preciso primeiro definir essas Categorias e depois exportá-las com o seu External ID. Elas se encontram no menu _Fiscal &gt; Produtos e Serviços &gt; Categorias de Produtos_ :
