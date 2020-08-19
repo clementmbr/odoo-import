@@ -22,13 +22,13 @@ Para indicar se um _Contato_ será chamado de _Senhor_, _Senhora_ ou _Doutor_, �
 
 Para importar esses objetos do tipo _Título_, ir no menu _Contatos &gt; Configuração &gt; Tratamento para o contato_.
 
-![](.gitbook/assets/image%20%2810%29.png)
+![](.gitbook/assets/image%20%288%29.png)
 
 ### Marcadores de Contato \(ou "Tags do Contato", ou "Categoria de Contato"\)
 
 Seguir as etapas que vimos [na introdução](./#criacao-do-external-id-durante-a-importacao) para realizar a importação de _Marcadores_.
 
-![](.gitbook/assets/image%20%2810%29.png)
+![](.gitbook/assets/image%20%288%29.png)
 
 ### Lista de preços
 
@@ -36,7 +36,7 @@ Uma "_Lista de preço_" é o nome do objeto Odoo enganosamente escolhido para di
 
 É possível definir ou encontrar a "_Lista de preços_" clicando embaixo da opção "_Múltiplos Preços de Venda por Produto_" nas _Configurações_ do aplicativo de Vendas :
 
-![](.gitbook/assets/image%20%2812%29.png)
+![](.gitbook/assets/image%20%289%29.png)
 
 ### Posições Fiscais
 
@@ -44,7 +44,7 @@ Uma _Posição Fiscal_ é uma tabela que faz a relação entre uma taxa e uma ou
 
 É possível definir ou encontrar a lista das _Posições fiscais_ no menu _Faturamento &gt; Configuração :_
 
-![](.gitbook/assets/image%20%2814%29.png)
+![](.gitbook/assets/image%20%2812%29.png)
 
 ### Contas de Recebimento e de Pagamento
 
@@ -66,13 +66,13 @@ Por exemplo, para usar um Plano de Contas padrão para empresas do Simples Nacio
 
 Caso você queira indicar uma Conta de Recebimento ou Pagamento especial para um Contato particular, é só preencher a coluna **property\_account\_receivable\_id/id** ou **property\_account\_payable\_id/id** do arquivo Excel de importação dos Contatos com o valor do _External ID_ da Conta desejada, encontrada no menu _Faturamento &gt; Configurações &gt; Plano de Contas_ :
 
-![](.gitbook/assets/image%20%2824%29.png)
+![](.gitbook/assets/image%20%2822%29.png)
 
 ### Condições de Pagamento
 
 Menu _Faturamento &gt; Configuração &gt; Condições de Pagamento :_
 
-![](.gitbook/assets/image%20%2832%29.png)
+![](.gitbook/assets/image%20%2818%29.png)
 
 ### Modos de Pagamento
 
@@ -84,7 +84,7 @@ Confira o nosso tutorial sobre os [Modos de Pagamento](https://odoo-doc.gitbook.
 
 Para acessar ao External ID dos _Modos de Pagamento_ é necessário primeiro instalar os dois módulos [account\_payment\_mode](https://github.com/OCA/bank-payment/tree/12.0/account_payment_mode)  e [account\_payment\_partner](https://github.com/OCA/bank-payment/tree/12.0/account_payment_partner) e depois acessar ao menu _Faturamento &gt; Configuração &gt; Payment Modes_ :
 
-![](.gitbook/assets/image%20%2818%29.png)
+![](.gitbook/assets/image%20%2817%29%20%281%29.png)
 
 ### Bancos
 
@@ -96,7 +96,7 @@ Entendemos que um _Contato_ vai estar ligado a um _Banco_ e uma _Conta Bancária
 
 Menu _Contatos &gt; Configuração &gt; Bancos_ :
 
-![](.gitbook/assets/image%20%283%29.png)
+![](.gitbook/assets/image%20%282%29%20%281%29.png)
 
 ## Importação dos contatos
 
@@ -322,7 +322,9 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
       </td>
     </tr>
   </tbody>
-</table>##  Importação posteriores aos contatos
+</table>
+
+##  Importação posteriores aos contatos
 
 É necessário importar **depois** dos _Contatos_ todos os objetos que precisam estar ligados a um _Contato_, como por exemplo as _Contas Bancárias_ :
 
@@ -330,7 +332,7 @@ Segue uma lista dos campos interessantes para uma importação de Contatos com t
 
 No menu _Contatos &gt; Configuração &gt; Contas Bancárias_ :
 
-![](.gitbook/assets/image%20%286%29.png)
+![](.gitbook/assets/image%20%285%29.png)
 
 ### 
 

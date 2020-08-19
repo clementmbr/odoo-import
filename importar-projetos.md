@@ -13,7 +13,7 @@ Para facilitar o processo de importação, é necessário instalar no mínimo am
 
 Como qualquer outro objeto Odoo, o processo para importar um projeto é de [primeiro **exportar** alguns projetos](importar-contatos.md#importacoes-anteriores-aos-contatos) atuais com a lista dos campos que você deseja importar com a opção "_Update data \(import-compatible export\)_" e o formato Excel.
 
-![](.gitbook/assets/image%20%2822%29.png)
+![](.gitbook/assets/image%20%2817%29%20%282%29.png)
 
 Entendemos que **um** _**Projeto**_ **é composto de** _**Tarefas**_, por isso, como para qualquer importação de objetos Odoo relacionados com outros, é importante importar primeiro os _Projetos_ e em um segundo momento as _Tarefas_, [cada _Tarefa_ sendo relacionada ao seu _Projeto_ pelo _External ID_ do _Projeto_](./#como-importar-relacoes-entre-objetos).
 
@@ -89,7 +89,9 @@ Uma lista de campos interessantes para importar pode ser :
       </td>
     </tr>
   </tbody>
-</table>### Sobre as Contas Analíticas
+</table>
+
+### Sobre as Contas Analíticas
 
 O Odoo cria uma _Conta Analítica_ com o mesmo nome que o _Projeto_ **automaticamente** cada vez que você criar um _Projeto_ manualmente ou quando você importa um _Projeto_ sem preencher a coluna "_analytic\_account\_id/id_".
 
@@ -97,7 +99,7 @@ Então você precisa criar uma _Conta Analítica_ previamente e informar o valor
 
 Se o menu _Contas Analíticas_ não aparecer no menu _Faturamento_ &gt; _Configuração_, pensar em ativar a configuração "_Contabilidade Analíticas_" do seu usuário, acessando pelo menu _Configurações_ &gt; _Utilizadores e Empresas_ &gt; _Usuários_, sem esquecer de [ativar o modo desenvolvedor](./#external-id-pela-interface) para todos os campos aparecerem.
 
-![](.gitbook/assets/image%20%2821%29.png)
+![](.gitbook/assets/image%20%2816%29.png)
 
 ### Sobre a privacidade
 
@@ -113,7 +115,7 @@ Além de relacionar uma _Tarefa_ a um _Projeto_ é necessário relacionar cada _
 
 Para encontrar o [_External ID_](./#external-id-pela-interface) __ dos Estágios, ir no menu _Projetos_ &gt; _Configuração_ &gt; _Estágios :_
 
-![](.gitbook/assets/image%20%288%29.png)
+![](.gitbook/assets/image%20%287%29.png)
 
 Segue uma lista de campos para importar _Tarefas_ de _Projetos_ :
 
@@ -168,7 +170,9 @@ Segue uma lista de campos para importar _Tarefas_ de _Projetos_ :
       <td style="text-align:left"><em>External ID </em>do<em> Est&#xE1;gio </em>de andamento</td>
     </tr>
   </tbody>
-</table>{% hint style="info" %}
+</table>
+
+{% hint style="info" %}
 Caso se queira importar uma _Tarefa_ com um _Estágio_ que existe no Odoo mas que não é presente no _Projeto_ específico da _Tarefa_, indicar o _External ID_ do _Estágio_ da mesma maneira e o _Estágio_ aparecerá daqui em diante nesse _Projeto_.
 {% endhint %}
 

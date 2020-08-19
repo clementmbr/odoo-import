@@ -6,11 +6,38 @@ description: ...com o módulo `l10n_br_fiscal` da Akretion instalado
 
 O módulo [l10n\_br\_fiscal](https://github.com/akretion/l10n-brazil/tree/12.0-mig-l10n_br_account_product/l10n_br_fiscal) desenvolvido pela [Akretion](https://akretion.com/pt-BR) permite ter no Odoo **a integralidade das informações fiscais necessárias** ao cadastramento oficial de qualquer tipo de produto, incluindo o NCM, NBS, NBM, CEST e outros :
 
-![](.gitbook/assets/image%20%2811%29.png)
+![](.gitbook/assets/image%20%2810%29.png)
 
 Como qualquer outro objeto Odoo, o processo para importar produtos é de [primeiro **exportar** alguns produtos](importar-contatos.md#importacoes-anteriores-aos-contatos) atuais com a lista dos campos que você deseja importar, com a opção "_Update data \(import-compatible export\)_" e o formato Excel.
 
-![](.gitbook/assets/image%20%2834%29.png)
+![](.gitbook/assets/image%20%2830%29.png)
+
+## Produtos e Variantes
+
+Existe **dois tipos de objetos Odoo** distintos para a gestão dos produtos, registrados em duas tabelas distintas no banco de dados : 
+
+* **product.product** para as variantes de um mesmo produto \(criados pelo menu _Variantes de Produto_\)
+* e **product.template** para os diferentes produtos que podem ter cada um várias variantes \(criados pelo menu _Produtos_\) :
+
+![](.gitbook/assets/image%20%2819%29.png)
+
+Por padrão esse menu das _Variantes de Produto_ não aparece no Odoo, tem que ser ativado nas configurações do modulo _Inventário_ :
+
+![](.gitbook/assets/image%20%2815%29.png)
+
+Porém, mesmo quando essa opção não for selecionada e o menu não aparecer, **os dois tipos de objetos coexistem** : quando criar um objeto _product.template_ pelo menu _Produtos_ clássico, um objeto _product.product_ será **automaticamente criado** e ligado a esse _product.template_, sendo a "única variante" dele.
+
+E vice e versa, quando uma variante _product.product_ é criada de zero pelo menu _Variantes de Produto_, o seu produto _product.template_ relacionado é **criado automaticamente**, sendo um _product.template_ com uma única variante.
+
+Por isso, é muito importante entender que quando você importar produtos pelo botão "Importar" do menu _Produtos_, você vai criar objetos do tipo _product.template_ \(e os objetos _product.product_ relacionados serão criados automaticamente\) enquanto quando importar produtos pelo botão "Importar" do menu _Variantes de Produtos_, você vai criar objetos do tipo _product.product_ \(e objetos _product.template_ serão criados automaticamente\).
+
+{% hint style="warning" %}
+Se quiser importar uma lista de novos produtos e as suas quantidades no inventário, você precisa primeiro importar a lista de produtos e depois importar um **Ajuste de Estoque**.
+
+No arquivo excel do _Ajuste de Estoque_ importado, você deve **indicar o** _**External ID**_ **do objeto** _**product.product**_ **do produto**, além da sua quantidade e da sua locação no inventário.
+
+Por isso recomendamos importar a lista dos novos produtos
+{% endhint %}
 
 ## Campos para importar
 
@@ -26,7 +53,7 @@ Como qualquer outro objeto Odoo, o processo para importar produtos é de [primei
 
 Nessa ideia, uma lista  mínima de campos para exportar e preparar o seu arquivo Excel para importação seria essa :
 
-![](.gitbook/assets/image%20%2828%29.png)
+![](.gitbook/assets/image%20%2824%29.png)
 
 Observando a questão de [importar os _External ID_ dos objetos que jà existem](./#como-importar-relacoes-entre-objetos) no Odoo para realizar a conexão com o seu novo produto importado.
 
@@ -112,11 +139,13 @@ Observando a questão de [importar os _External ID_ dos objetos que jà existem]
       </td>
     </tr>
   </tbody>
-</table>## Categoria de Produto
+</table>
+
+## Categoria de Produto
 
 É preciso primeiro definir essas Categorias e depois exportá-las com o seu External ID. Elas se encontram no menu _Fiscal &gt; Produtos e Serviços &gt; Categorias de Produtos_ :
 
-![](.gitbook/assets/image%20%2825%29.png)
+![](.gitbook/assets/image%20%2821%29.png)
 
 Ou no menu _Inventário &gt; Configurações &gt; Categorias de Produtos_.
 
