@@ -19,7 +19,7 @@ Existe **dois tipos de objetos Odoo** distintos para a gestão dos produtos, reg
 * **product.product** para as variantes de um mesmo produto \(criados pelo menu _Variantes de Produto_\)
 * **product.template** para os diferentes produtos que podem ter cada um várias variantes \(criados pelo menu _Produtos_\) :
 
-![](.gitbook/assets/image%20%2819%29.png)
+![](.gitbook/assets/image%20%2823%29.png)
 
 Por padrão esse menu das _Variantes de Produto_ não aparece no Odoo, tem que ser ativado nas configurações do modulo _Inventário_ :
 
@@ -47,7 +47,7 @@ Ao contrário, os campos do tipo "**atributo**" de um _product.product_ **não v
 
 Graça a essa sincronização dos campos comuns, os nomes das colunas do arquivo excel de importação \(i.e. os "campos" desses produtos importados\) vão ser **as mesmas** se usar esse arquivo para importar objetos _product.product_ ou _product.template_.
 
-A única coisa é de cuidar de **não realizar a importação em duplo !** Se importar objetos _product.product_, os objetos _product.template_ relacionados vão ser criados automaticamente. Isso quer dizer que você vai escolher e conhecer os _External IDs_ desses _product.product_ importados, porém você não vai conhecer facilmente os _External IDs_ desses _product.template_ criados automaticamente. __
+A única coisa é de cuidar de **não realizar a importação em duplo !** Se importar objetos _product.product_, os objetos _product.template_ relacionados vão ser criados automaticamente. Isso quer dizer que você vai escolher e conhecer os _External IDs_ desses _product.product_ importados, porém você não vai conhecer facilmente os _External IDs_ desses _product.template_. Eles vão ser **diferentes** e definidos automaticamente por Odoo. __
 
 ## Campos para importar
 
@@ -81,6 +81,15 @@ Observando a questão de [importar os _External ID_ dos objetos que jà existem]
       <td style="text-align:left">
         <p><em>External ID</em> dado ao <em>Produto</em> importado.</p>
         <p>Se deixar vazio o Odoo criar&#xE1; um automaticamente.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>default_code</b>
+      </td>
+      <td style="text-align:left">
+        <p>Refer&#xEA;ncia interna do produto (opcional).</p>
+        <p>Geralmente &#xE9; um n&#xFA;mero &#xFA;nico do <em>Produto</em> para diferenciar
+          dois produtos que poderiam ter o mesmo nome.</p>
       </td>
     </tr>
     <tr>
@@ -151,13 +160,9 @@ Observando a questão de [importar os _External ID_ dos objetos que jà existem]
   </tbody>
 </table>
 
-Um exemplo de arquivo excel de importação de produtos pode ser baixado aqui :
+[Baixar aqui um exemplo de arquivo excel de importação de produtos.](https://drive.google.com/file/d/1m7SbjiW-sgme3Jj4CuXtKquEj2iiQKhC/view?usp=sharing)
 
-{% embed url="https://drive.google.com/file/d/1m7SbjiW-sgme3Jj4CuXtKquEj2iiQKhC/view?usp=sharing" %}
-
-
-
-## Categoria de Produto
+### Categoria de Produto
 
 É preciso primeiro definir essas Categorias e depois exportá-las com o seu External ID. Elas se encontram no menu _Fiscal &gt; Produtos e Serviços &gt; Categorias de Produtos_ :
 
@@ -165,7 +170,7 @@ Um exemplo de arquivo excel de importação de produtos pode ser baixado aqui :
 
 Ou no menu _Inventário &gt; Configurações &gt; Categorias de Produtos_.
 
-## Tipo Fiscal
+### Tipo Fiscal
 
 Escolher o número seguindo o Tipo Fiscal desejado :
 
@@ -188,7 +193,7 @@ Escolher o número seguindo o Tipo Fiscal desejado :
 Esses _Tipos Fiscais_ são fixos no Odoo, **não é possível modificá-los**.
 {% endhint %}
 
-## Origem do ICMS
+### Origem do ICMS
 
 Escolher o número seguindo a Origem do ICMS desejado :
 
@@ -208,5 +213,11 @@ Escolher o número seguindo a Origem do ICMS desejado :
 Essas _Origens de ICMS_ são fixas no Odoo, **não é possível modificá-las**.
 {% endhint %}
 
+## Importar um Ajuste de Estoque
 
+Para definir a quantidade de vários produtos presentes num estoque no Odoo é preciso realizar uma operação de _Ajuste de Estoque :_
+
+![](.gitbook/assets/image%20%2819%29.png)
+
+Em vez de definir esse _Ajuste de Estoque_ manualmente, é possível importar um. Isso ajuda muito se conhecer bem os _External IDs_ dos produtos
 
