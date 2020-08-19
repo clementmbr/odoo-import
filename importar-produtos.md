@@ -36,7 +36,7 @@ Se quiser importar uma lista de novos produtos e as suas quantidades no inventá
 
 No arquivo excel do _Ajuste de Estoque_ importado, você deve **indicar o** _**External ID**_ **do objeto** _**product.product**_ **do produto**, além da sua quantidade e da sua locação no inventário.
 
-Por isso **recomendamos importar a lista dos novos produtos pelo menu** _**Variantes de Produto**_, mesmo se você não usar essa gestão dos variantes depois. No arquivo excel dessa importação você vai indicar os _External IDs_ desses novos objetos _product.product_... e desta maneira você vai poder citar esses mesmos _External IDs_ na importação do _Ajuste de Estoque_ na seguida.
+Por isso **recomendamos importar a lista dos novos produtos pelo menu** _**Variantes de Produto**_, mesmo se você não usar essa gestão dos variantes depois. No arquivo excel dessa importação você vai indicar os _External IDs_ desses novos objetos _product.product_... o que vai permitir você citar esses mesmos _External IDs_ na importação do _Ajuste de Estoque_ na seguida.
 {% endhint %}
 
 ## Campos para importar
