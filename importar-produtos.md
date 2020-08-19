@@ -215,9 +215,66 @@ Essas _Origens de ICMS_ são fixas no Odoo, **não é possível modificá-las**.
 
 ## Importar um Ajuste de Estoque
 
-Para definir a quantidade de vários produtos presentes num estoque no Odoo é preciso realizar uma operação de _Ajuste de Estoque :_
+Para definir a **quantidade** de vários produtos presentes num estoque no Odoo é preciso realizar uma operação de _Ajuste de Estoque :_
 
 ![](.gitbook/assets/image%20%2819%29.png)
 
-Em vez de definir esse _Ajuste de Estoque_ manualmente, é possível importar um. Isso ajuda muito se conhecer bem os _External IDs_ dos produtos
+Em vez de definir esse _Ajuste de Estoque_ manualmente, é possível importar um. Isso ajuda muito se conhecer os _External IDs_ dos produtos cuja quantidade vai ser definida, por exemplo depois da importação prévia desses produtos.
+
+Os campos mínimos necessários para importar um _Ajuste de Estoque_ são os seguintes :
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">T&#xED;tulo da coluna do arquivo .xls</th>
+      <th style="text-align:left">Conte&#xFA;do</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>id</b>
+      </td>
+      <td style="text-align:left">
+        <p><em>External ID</em> dado ao <em>Ajuste de Estoque</em> importado.</p>
+        <p>Se deixar vazio o Odoo criar&#xE1; um automaticamente.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>name</b>
+      </td>
+      <td style="text-align:left">Nome do <em>Ajuste de Estoque</em> importado.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>line_ids/location_id/id</b>
+      </td>
+      <td style="text-align:left"><em>External ID</em> da Local do Estoque a onde vai se encontrar uma certa
+        quantidade de um certo <em>Produto</em>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>line_ids/product_id/id</b>
+      </td>
+      <td style="text-align:left">
+        <p>&#x26A0;&#xFE0F; <em>External ID</em> do objeto <b>product.product</b> do <em>Produto</em> cuja
+          quantidade vai ser definida.</p>
+        <p></p>
+        <p>Corresponde ao <em>External ID </em>definido no arquivo excel de importa&#xE7;&#xE3;o
+          dos produtos <b>apenas</b> se esse arquivo foi importado pelo bot&#xE3;o
+          &quot;Importar&quot; do menu <a href="importar-produtos.md#produtos-e-variantes"><em><b>Variantes de Produto</b></em></a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>line_ids/product_qty</b>
+      </td>
+      <td style="text-align:left">
+        <p>A quantidade do <em>Produto</em> no <em>Local</em>.</p>
+        <p></p>
+        <p>Pensar em definir a <em>Unidade de Medida</em> do <em>Produto</em> se precisar.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+[Baixar aqui um exemplo de arquivo excel de importação de ajuste de estoque.](https://drive.google.com/file/d/1_vq57UVlzdcRKtTr3RHbDsIqF_hkHzdG/view?usp=sharing)
+
+
 
