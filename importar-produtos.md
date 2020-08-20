@@ -316,6 +316,10 @@ Os campos mínimos necessários para importar um _Ajuste de Estoque_ são os seg
 Para importar a informação de quantidade para vários produtos no mesmo _Ajuste de Estoque_, basta indicar o _External ID_ e o nome do _Ajuste de Estoque_ apenas na primeira linha do arquivo excel e depois **deixar essas colunas vazias** enquanto preenche as colunas começando com _"line\_ids"_.
 {% endhint %}
 
+Uma vez que o _Ajuste de Estoque_ for importado, ele é apenas importado no estágio "Provisório". Precisará ainda validar ele manualmente para atualizar de fato as quantidades dos produtos no Estoque :
+
+![](.gitbook/assets/image%20%2832%29.png)
+
 ### Local do Estoque
 
 É importante fazer a diferencia entre _Armazéns_ e _Locais_ no Odoo :
