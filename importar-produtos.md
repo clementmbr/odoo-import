@@ -241,6 +241,10 @@ Para definir a **quantidade** de vários produtos presentes num estoque no Odoo 
 
 ![](.gitbook/assets/image%20%2829%29.png)
 
+{% hint style="warning" %}
+Apenas os produtos do tipo "Produto" podem ter uma certa quantidade em Estoque. Os produtos do tipo "Consumível" ou "Serviço" não podem.
+{% endhint %}
+
 Em vez de definir esse _Ajuste de Estoque_ manualmente, é possível importar um. Isso ajuda muito se conhecer os _External IDs_ dos produtos cuja quantidade vai ser definida, por exemplo depois da importação prévia desses produtos.
 
 Os campos mínimos necessários para importar um _Ajuste de Estoque_ são os seguintes :
