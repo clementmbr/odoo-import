@@ -12,7 +12,7 @@ Como qualquer outro objeto Odoo, o processo para importar produtos é de [primei
 
 ![](.gitbook/assets/image%20%2830%29.png)
 
-A importação da quantidade de produtos deve ser realizado num segundo tempo, importando um _Ajuste de Estoque._
+A importação da **quantidade** de produtos deve ser realizado num segundo tempo, importando um [_Ajuste de Estoque_](importar-produtos.md#importar-um-ajuste-de-estoque)_._
 
 ## Produtos e Variantes
 
@@ -21,11 +21,11 @@ Existe **dois tipos de objetos Odoo** distintos para a gestão dos produtos, reg
 * **product.product** para as variantes de um mesmo produto \(criados pelo menu _Variantes de Produto_\)
 * **product.template** para os diferentes produtos que podem ter cada um várias variantes \(criados pelo menu _Produtos_\) :
 
-![](.gitbook/assets/image%20%2823%29.png)
+![](.gitbook/assets/image%20%2831%29.png)
 
 Por padrão esse menu das _Variantes de Produto_ não aparece no Odoo, tem que ser ativado nas configurações do modulo _Inventário_ :
 
-![](.gitbook/assets/image%20%2815%29.png)
+![](.gitbook/assets/image%20%2827%29.png)
 
 Porém, mesmo quando essa opção não for selecionada e o menu não aparecer, **os dois tipos de objetos coexistem** : quando criar um objeto _product.template_ pelo menu _Produtos_ clássico, um objeto _product.product_ será **automaticamente criado** e ligado a esse _product.template_, sendo a "única variante" dele.
 
@@ -34,11 +34,11 @@ E vice e versa, quando uma variante _product.product_ é criada de zero pelo men
 Por isso, é muito importante entender que quando você importar produtos pelo **botão "Importar" do menu** _**Produtos**_, você vai criar objetos do tipo ****_**product.template**_ \(e os objetos _product.product_ relacionados serão criados automaticamente\) enquanto quando importar produtos pelo **botão "Importar" do menu** _**Variantes de Produtos**_, você vai criar objetos do tipo _**product.product**_ \(e objetos _product.template_ serão criados automaticamente\).
 
 {% hint style="warning" %}
-Se quiser importar uma lista de novos produtos junto com as suas quantidades no inventário, você precisa primeiro importar a lista de produtos e depois importar um **Ajuste de Estoque**.
+Se quiser importar uma lista de novos produtos junto com as suas quantidades no inventário, você precisa primeiro importar a lista de produtos e depois importar um [**Ajuste de Estoque**](importar-produtos.md#importar-um-ajuste-de-estoque).
 
 No arquivo excel do _Ajuste de Estoque_ importado, você deve **indicar o** _**External ID**_ **do objeto** _**product.product**_ **do produto**, além da sua quantidade e da sua locação no inventário.
 
-Por isso **recomendamos importar a lista dos novos produtos pelo menu** _**Variantes de Produto**_, mesmo se você não usar essa gestão dos variantes depois. No arquivo excel dessa importação você vai indicar os _External IDs_ desses novos objetos _product.product_... o que vai permitir você citar esses mesmos _External IDs_ na importação do _Ajuste de Estoque_ na seguida.
+🔎 ****Por isso **recomendamos importar a lista dos novos produtos pelo menu** _**Variantes de Produto**_, mesmo se você não usar essa gestão dos variantes depois. No arquivo excel dessa importação você vai indicar os _External IDs_ desses novos objetos _product.product_... o que vai permitir você citar esses mesmos _External IDs_ na importação do _Ajuste de Estoque_ na seguida.
 {% endhint %}
 
 Apesar de adicionar um certa complexidade, essa gestão dos produtos com esses dois tipos de objetos é muito bem elaborada no Odoo.
@@ -49,7 +49,7 @@ Ao contrário, os campos do tipo "**atributo**" de um _product.product_ **não v
 
 Graça a essa sincronização dos campos comuns, os nomes das colunas do arquivo excel de importação \(i.e. os "campos" desses produtos importados\) vão ser **as mesmas** se usar esse arquivo para importar objetos _product.product_ ou _product.template_.
 
-A única coisa é de cuidar de **não realizar a importação em duplo !** Se importar objetos _product.product_, os objetos _product.template_ relacionados vão ser criados automaticamente. Isso quer dizer que você vai escolher e conhecer os _External IDs_ desses _product.product_ importados, porém você não vai conhecer facilmente os _External IDs_ desses _product.template_. Eles vão ser **diferentes** e definidos automaticamente por Odoo. __
+⚠️ A única coisa é de cuidar de **não realizar a importação em duplo !** Se importar objetos _product.product_, os objetos _product.template_ relacionados vão ser criados automaticamente. Isso quer dizer que você vai escolher e conhecer os _External IDs_ desses _product.product_ importados, porém você não vai conhecer facilmente os _External IDs_ desses _product.template_. Eles vão ser **diferentes** e definidos automaticamente por Odoo. __
 
 ## Campos para importar
 
@@ -121,6 +121,11 @@ Observando a questão de [importar os _External ID_ dos objetos que jà existem]
         mesma categoria (como para necessidades cont&#xE1;beis por exemplo)</td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>uom_id/id</b>
+      </td>
+      <td style="text-align:left"><em>External ID </em>da <em>Unidade de Medida </em>do produto.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>fiscal_type</b>
       </td>
       <td style="text-align:left">Um n&#xFA;mero entre 00 e 10 determinando o <a href="importar-produtos.md#tipo-fiscal">Tipo Fiscal</a> do
@@ -162,7 +167,7 @@ Observando a questão de [importar os _External ID_ dos objetos que jà existem]
   </tbody>
 </table>
 
-[Baixar aqui um exemplo de arquivo excel de importação de produtos.](https://drive.google.com/file/d/1m7SbjiW-sgme3Jj4CuXtKquEj2iiQKhC/view?usp=sharing)
+[Baixar aqui um exemplo de arquivo excel de importação de _Produtos_.](https://drive.google.com/file/d/1m7SbjiW-sgme3Jj4CuXtKquEj2iiQKhC/view?usp=sharing)
 
 ### Categoria de Produto
 
@@ -171,6 +176,20 @@ Observando a questão de [importar os _External ID_ dos objetos que jà existem]
 ![](.gitbook/assets/image%20%2821%29.png)
 
 Ou no menu _Inventário &gt; Configurações &gt; Categorias de Produtos_.
+
+### Unidade de medida
+
+Todas as unidades de medida possíveis se encontram no menu _UoM_ das configurações do módulo Inventário :
+
+![](.gitbook/assets/image%20%2823%29.png)
+
+Esse menu não aparece por padrão, é necessário ativar a funcionalidade nas configurações gerais :
+
+![](.gitbook/assets/image%20%2819%29.png)
+
+E cada produto vai ter a sua própria unidade de medida :
+
+![](.gitbook/assets/image%20%2825%29.png)
 
 ### Tipo Fiscal
 
@@ -219,7 +238,7 @@ Essas _Origens de ICMS_ são fixas no Odoo, **não é possível modificá-las**.
 
 Para definir a **quantidade** de vários produtos presentes num estoque no Odoo é preciso realizar uma operação de _Ajuste de Estoque :_
 
-![](.gitbook/assets/image%20%2819%29.png)
+![](.gitbook/assets/image%20%2829%29.png)
 
 Em vez de definir esse _Ajuste de Estoque_ manualmente, é possível importar um. Isso ajuda muito se conhecer os _External IDs_ dos produtos cuja quantidade vai ser definida, por exemplo depois da importação prévia desses produtos.
 
@@ -249,8 +268,8 @@ Os campos mínimos necessários para importar um _Ajuste de Estoque_ são os seg
     <tr>
       <td style="text-align:left"><b>line_ids/location_id/id</b>
       </td>
-      <td style="text-align:left"><em>External ID</em> da Local do Estoque a onde vai se encontrar uma certa
-        quantidade de um certo <em>Produto</em>.</td>
+      <td style="text-align:left"><em>External ID</em> da <a href="importar-produtos.md#local-do-estoque"><em>Local do Estoque</em></a> a
+        onde vai se encontrar uma certa quantidade de um certo <em>Produto</em>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>line_ids/product_id/id</b>
@@ -276,7 +295,21 @@ Os campos mínimos necessários para importar um _Ajuste de Estoque_ são os seg
   </tbody>
 </table>
 
-[Baixar aqui um exemplo de arquivo excel de importação de ajuste de estoque.](https://drive.google.com/file/d/1_vq57UVlzdcRKtTr3RHbDsIqF_hkHzdG/view?usp=sharing)
+[Baixar aqui um exemplo de arquivo excel de importação de _Ajuste de Estoque_.](https://drive.google.com/file/d/1_vq57UVlzdcRKtTr3RHbDsIqF_hkHzdG/view?usp=sharing)
 
+{% hint style="info" %}
+Para importar a informação de quantidade para vários produtos no mesmo _Ajuste de Estoque_, basta indicar o _External ID_ e o nome do _Ajuste de Estoque_ apenas na primeira linha do arquivo excel e depois **deixar essas colunas vazias** enquanto preenche as colunas começando com _"line\_ids"_.
+{% endhint %}
 
+### Local do Estoque
+
+É importante fazer a diferencia entre _Armazéns_ e _Locais_ no Odoo :
+
+![](.gitbook/assets/image%20%2813%29.png)
+
+Basicamente, **em cada** _**Armazém**_ **existe vários** _**Locais**_ que indicam a onde encontrar um estoque de produto dentro do Armazém.  Esse menu "Locais" do módulo "Inventário" não aparece por padrão, porém é possível ativar essa funcionalidade \(e desta maneira acessar aos _External IDs_ dos _Locais_\) nas configurações :
+
+![](.gitbook/assets/image%20%2828%29.png)
+
+### 
 
