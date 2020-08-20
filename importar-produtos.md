@@ -12,6 +12,8 @@ Como qualquer outro objeto Odoo, o processo para importar produtos é de [primei
 
 ![](.gitbook/assets/image%20%2830%29.png)
 
+A importação da quantidade de produtos deve ser realizado num segundo tempo, importando um _Ajuste de Estoque._
+
 ## Produtos e Variantes
 
 Existe **dois tipos de objetos Odoo** distintos para a gestão dos produtos, registrados em duas tabelas distintas no banco de dados : 
