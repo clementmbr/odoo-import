@@ -123,7 +123,8 @@ Observando a questão de [importar os _External ID_ dos objetos que jà existem]
     <tr>
       <td style="text-align:left"><b>uom_id/id</b>
       </td>
-      <td style="text-align:left"><em>External ID </em>da <em>Unidade de Medida </em>do produto.</td>
+      <td style="text-align:left"><em>External ID </em>da <a href="importar-produtos.md#unidade-de-medida"><em>Unidade de Medida</em></a><em> </em>do
+        produto.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>fiscal_type</b>
@@ -289,7 +290,8 @@ Os campos mínimos necessários para importar um _Ajuste de Estoque_ são os seg
       <td style="text-align:left">
         <p>A quantidade do <em>Produto</em> no <em>Local</em>.</p>
         <p></p>
-        <p>Pensar em definir a <em>Unidade de Medida</em> do <em>Produto</em> se precisar.</p>
+        <p>Pensar em definir a <a href="importar-produtos.md#unidade-de-medida"><em>Unidade de Medida</em></a> do <em>Produto</em> antes
+          se precisar.</p>
       </td>
     </tr>
   </tbody>
