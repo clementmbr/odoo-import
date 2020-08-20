@@ -123,8 +123,17 @@ Observando a questão de [importar os _External ID_ dos objetos que jà existem]
     <tr>
       <td style="text-align:left"><b>uom_id/id</b>
       </td>
-      <td style="text-align:left"><em>External ID </em>da <a href="importar-produtos.md#unidade-de-medida"><em>Unidade de Medida</em></a><em> </em>do
-        produto.</td>
+      <td style="text-align:left"><em>External ID </em>da <a href="importar-produtos.md#unidade-de-medida"><em>Unidade de Medida</em></a><em> </em>padr&#xE3;o
+        do produto.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>uom_po_id/id</b>
+      </td>
+      <td style="text-align:left">
+        <p><em>External ID </em>da <a href="importar-produtos.md#unidade-de-medida"><em>Unidade de Medida</em></a><em> </em>de
+          compra do produto.</p>
+        <p>Deve ser sempre igual &#xE0; <em>Unidade de Medida</em> padr&#xE3;o.</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>fiscal_type</b>
