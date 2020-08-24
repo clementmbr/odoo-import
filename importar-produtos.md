@@ -174,6 +174,18 @@ Observando a questão de [importar os _External ID_ dos objetos que jà existem]
           escolhido.</p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>sale_ok</b>
+      </td>
+      <td style="text-align:left">Escrever &quot;1&quot; se o produto pode ser vendido, &quot;0&quot; (zero)
+        se n&#xE3;o puder</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>purchase_ok</b>
+      </td>
+      <td style="text-align:left">Escrever &quot;1&quot; se o produto pode ser comprado, &quot;0&quot; (zero)
+        se n&#xE3;o puder</td>
+    </tr>
   </tbody>
 </table>
 
