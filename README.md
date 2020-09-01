@@ -1,5 +1,5 @@
 ---
-description: Tutorial realizado pela Akretion - www.akretion.com.br
+description: 'Tutorial realizado pela Akretion - http://akretion.com.br'
 ---
 
 # Funcionamento da importação
