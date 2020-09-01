@@ -1,4 +1,4 @@
-# Funcionamento da importação no Odoo
+# Funcionamento da importação
 
 Para importar dados no Odoo, basta clicar no botão _Import_ da página do tipo de objeto desejado e selecionar o arquivo Excel com os dados do objeto a ser importado.
 
