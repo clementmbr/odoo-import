@@ -1,10 +1,10 @@
 ---
-description: ...com o módulo `l10n_br_fiscal` da Akretion instalado
+description: ...com o módulo `l10n_br_fiscal` instalado
 ---
 
 # Importar produtos
 
-O módulo [l10n\_br\_fiscal](https://github.com/akretion/l10n-brazil/tree/12.0-mig-l10n_br_account_product/l10n_br_fiscal) desenvolvido pela [Akretion](https://akretion.com/pt-BR) permite ter no Odoo **a integralidade das informações fiscais necessárias** ao cadastramento oficial de qualquer tipo de produto, incluindo o NCM, NBS, NBM, CEST e outros :
+O módulo [l10n\_br\_fiscal](https://github.com/OCA/l10n-brazil/tree/12.0/l10n_br_fiscal) disponível no repositório da localização brasileira da [OCA](https://odoo-community.org/) e desenvolvido pela [Akretion](https://akretion.com/pt-BR) permite ter no Odoo **a integralidade das informações fiscais necessárias** ao cadastramento oficial de qualquer tipo de produto, incluindo o NCM, NBS, NBM, CEST e outros :
 
 ![](.gitbook/assets/image%20%2810%29.png)
 
