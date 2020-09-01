@@ -1,10 +1,10 @@
 ---
-description: Tutorial realizado por Akretion www.akretion.com.br
+description: Tutorial realizado por Akretion | www.akretion.com.br
 ---
 
 # Funcionamento da importação
 
-Para importar dados no Odoo, basta clicar no botão _Import_ da página do tipo de objeto desejado e selecionar o arquivo Excel com os dados do objeto a ser importado.
+Para importar dados no [Odoo](http://odoo.com), basta clicar no botão _Import_ da página do tipo de objeto desejado e selecionar o arquivo Excel com os dados do objeto a ser importado.
 
 ![](.gitbook/assets/image%20%2817%29.png)
 
